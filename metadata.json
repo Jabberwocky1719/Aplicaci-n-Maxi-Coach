@@ -1,0 +1,5 @@
+{
+  "name": "Maxi-Coach Cobratodo",
+  "description": "A virtual collection assistant PWA designed for field agents in the motorcycle financing sector in Mexico. It provides dynamic client information, context-aware FAQs, and an interactive chat to guide collection strategies.",
+  "requestFramePermissions": []
+}

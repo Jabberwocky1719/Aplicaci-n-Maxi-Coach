@@ -1,0 +1,1369 @@
+import { User, Theme, VoiceProfile, KnowledgeBase } from './types';
+
+export const localUsers: User[] = [
+  { username: 'GestorTest', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'SuperAdminMax', password: 'Pass1234', role: 'Admin', accessMaxiCoach: true, accessFalcon: true },
+  { username: 'SuperAdminDnd', password: 'Pass1234', role: 'Admin', accessMaxiCoach: true, accessFalcon: true },
+  { username: 'UsuarioPrueba2', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'MKGestor', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'jesusr', password: 'Pass1234', role: 'Admin', accessMaxiCoach: true, accessFalcon: true },
+  { username: 'UsuarioPrueba1', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: true },
+  { username: 'DAZPEITIA', password: 'Pass1234', role: 'Admin', accessMaxiCoach: true, accessFalcon: true },
+  { username: 'FMURILLO', password: 'Pass1234', role: 'Lider', accessMaxiCoach: false, accessFalcon: true },
+  { username: 'CSALGADO', password: 'Pass1234', role: 'Lider', accessMaxiCoach: false, accessFalcon: true },
+  { username: 'FAGUILAR', password: 'Pass1234', role: 'Lider', accessMaxiCoach: false, accessFalcon: true },
+  { username: 'PAYALA', password: 'Pass1234', role: 'Lider', accessMaxiCoach: false, accessFalcon: true },
+  { username: 'JGONZALEZ', password: 'Pass1234', role: 'Lider', accessMaxiCoach: false, accessFalcon: true },
+  { username: 'EMONTES', password: 'Pass1234', role: 'Lider', accessMaxiCoach: false, accessFalcon: true },
+  { username: 'ERODRIGUEZ', password: 'Pass1234', role: 'Lider', accessMaxiCoach: false, accessFalcon: true },
+  { username: 'ZDIAZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'RJLOPEZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'OGMANRIQUEZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'FMEZA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'JRAMIREZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'JARAMIREZG', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'JRENTERIA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'DSADIVAR', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'LMSAUCEDO', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'JSOLORIO', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'RTEJEDA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'PVILLEGAS', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'JDALVAREZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'MBRAVO', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'GRGONZALEZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'AGUTIERREZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'CIHERNANDEZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'XHERRERA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'GLOPEZP', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'RMMADRIGAL', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'EMOSQUEDA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'AOBREGON', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'CORTEGA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'JPEREZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'AYVIEYRA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'CALEJO', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'VGALARZA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'CVARGAS', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'NVALENZUELA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'CIZAVALA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'JBARON', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'NGONZALEZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'ALOPEZC', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'JSLUNA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'LAAROS', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'YDIAS', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'JVELIZALDE', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'JJGARAY', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'IGARCIAR', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'ANORIEGA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'AMRODRIGUEZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'YSANCHEZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'CBTIERRABLAN', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'JTIERRABLANC', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'OCALDERON', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'MGARCIAI', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'OGROMAN', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'CDREYES', password: 'Pass1234', role: 'Admin', accessMaxiCoach: true, accessFalcon: true },
+  { username: 'HCANDELARIO', password: 'Pass1234', role: 'Lider', accessMaxiCoach: false, accessFalcon: true },
+  { username: 'JBSANTIAGO', password: 'Pass1234', role: 'Lider', accessMaxiCoach: false, accessFalcon: true },
+  { username: 'JGUZMAN', password: 'Pass1234', role: 'Lider', accessMaxiCoach: false, accessFalcon: true },
+  { username: 'ACHIMAL', password: 'Pass1234', role: 'Lider', accessMaxiCoach: false, accessFalcon: true },
+  { username: 'EAGUILAR', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'JSANTILLAN', password: 'Pass1234', role: 'Lider', accessMaxiCoach: false, accessFalcon: true },
+  { username: 'JSANTILLANB', password: 'Pass1234', role: 'Lider', accessMaxiCoach: false, accessFalcon: true },
+  { username: 'EGAONAR', password: 'Pass1234', role: 'Lider', accessMaxiCoach: false, accessFalcon: true },
+  { username: 'DDOMINGUEZ', password: 'Pass1234', role: 'Lider', accessMaxiCoach: false, accessFalcon: true },
+  { username: 'NJPAREDESR', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'ASERRANO', password: 'Pass1234', role: 'Lider', accessMaxiCoach: false, accessFalcon: true },
+  { username: 'RCORTES', password: 'Pass1234', role: 'Lider', accessMaxiCoach: false, accessFalcon: true },
+  { username: 'RSOLANO', password: 'Pass1234', role: 'Lider', accessMaxiCoach: false, accessFalcon: true },
+  { username: 'CALAMILLO', password: 'Pass1234', role: 'Lider', accessMaxiCoach: false, accessFalcon: true },
+  { username: 'LALVARADOA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'JCCARDENAS', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'NCARDENAS', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'ANGARCIA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'AUGARCIAM', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'IHERNANDEZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'YCHERNANDEZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'ALOERA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'CMARTINEZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'CANAVARRO', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'ONIEVES', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'RRAMIRO', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'DESALAZAR', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'MMSILVA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'GRSILVA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'JAGUILAR', password: 'Pass1234', role: 'Lider', accessMaxiCoach: false, accessFalcon: true },
+  { username: 'HECASTANEDA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'JNDIAZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'JISALAZAR', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'SMVALENZUEL', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'NICERON', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'BGONZALEZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'MMANDUJANO', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'JAMAURO', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'AOCON', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'MRODRIGUEZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'JVEGA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'JCARO', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'SOCARRILLO', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'LMEDRAN', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'MPEDRAZA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'RRODRIGUEZG', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'RRODRIGUEZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'JBELTRAN', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'GCABALLERO', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'MAGALAN', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'JGASCA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'FMONDRAGON', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'JLVAZQUEZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'JVILLA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'WGALINDO', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'UGARDUNO', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'JMERINOR', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'EMOLINA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'OAORTEGA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'ABALANDRAN', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'LCERVANTES', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'JFCHAVEZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'JEPEREZM', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'JMGONZALEZR', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'ASANCHEZM', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'EEARTEAGA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'CICANCINO', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'GESPEJO', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'HRREYES', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'JARICO', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'CCARRILLO', password: 'Pass1234', role: 'Lider', accessMaxiCoach: false, accessFalcon: true },
+  { username: 'GCARRILLO', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'BICOPADO', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'MACRUZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'IDOMINGUEZ', password: 'Pass1234', role: 'Lider', accessMaxiCoach: false, accessFalcon: true },
+  { username: 'PGERARDO', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'INERY', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'EOSORIO', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'PMORA', password: 'Pass1234', role: 'Lider', accessMaxiCoach: false, accessFalcon: true },
+  { username: 'CASOLANO', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'ROVELASCO', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'PVELASCO', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'MRANTONIOP', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'CACORTES', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'SDIAZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'GGARCIAR', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'SGIRON', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'CDPALACIOS', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'IROMERO', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'SRIVERA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'AZAMORAN', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'LACORTINA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'YDURAN', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'JAFLORES', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'MGHERNANDEZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'MHERNANDEZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'AMHERNANDEZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'DAJIMENEZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'OJIMENEZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'JJORDAN', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'FLLOPEZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'ERONZON', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'LAROQUEN', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'RROSAS', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'DGARCIA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'LJIMENEZG', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'JAPEDRAZA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'EAPEREZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'JAPEREZG', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'LQUINTERO', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'ESANCHEZ', password: 'Pass1234', role: 'Admin', accessMaxiCoach: true, accessFalcon: true },
+  { username: 'DSOTO', password: 'Pass1234', role: 'Lider', accessMaxiCoach: false, accessFalcon: true },
+  { username: 'LALCARADO', password: 'Pass1234', role: 'Lider', accessMaxiCoach: false, accessFalcon: true },
+  { username: 'ERAMIREZ', password: 'Pass1234', role: 'Lider', accessMaxiCoach: false, accessFalcon: true },
+  { username: 'HEGUERRERO', password: 'Pass1234', role: 'Lider', accessMaxiCoach: false, accessFalcon: true },
+  { username: 'MTELLEZ', password: 'Pass1234', role: 'Lider', accessMaxiCoach: false, accessFalcon: true },
+  { username: 'JCFLORES', password: 'Pass1234', role: 'Lider', accessMaxiCoach: false, accessFalcon: true },
+  { username: 'JHERRERA', password: 'Pass1234', role: 'Lider', accessMaxiCoach: false, accessFalcon: true },
+  { username: 'JIPINEDA', password: 'Pass1234', role: 'Lider', accessMaxiCoach: false, accessFalcon: true },
+  { username: 'DCRUZ', password: 'Pass1234', role: 'Lider', accessMaxiCoach: false, accessFalcon: true },
+  { username: 'AMARTINEZ', password: 'Pass1234', role: 'Lider', accessMaxiCoach: false, accessFalcon: true },
+  { username: 'MTELLO', password: 'Pass1234', role: 'Lider', accessMaxiCoach: false, accessFalcon: true },
+  { username: 'DMANZANERO', password: 'Pass1234', role: 'Lider', accessMaxiCoach: false, accessFalcon: true },
+  { username: 'VLORTIZ', password: 'Pass1234', role: 'Lider', accessMaxiCoach: false, accessFalcon: true },
+  { username: 'NCALIX', password: 'Pass1234', role: 'Lider', accessMaxiCoach: false, accessFalcon: true },
+  { username: 'KBALCASAR', password: 'Pass1234', role: 'Lider', accessMaxiCoach: false, accessFalcon: true },
+  { username: 'SMENDOZA', password: 'Pass1234', role: 'Lider', accessMaxiCoach: false, accessFalcon: true },
+  { username: 'LAMORALES', password: 'Pass1234', role: 'Lider', accessMaxiCoach: false, accessFalcon: true },
+  { username: 'AGARCIA', password: 'Pass1234', role: 'Lider', accessMaxiCoach: false, accessFalcon: true },
+  { username: 'RCETINA', password: 'Pass1234', role: 'Lider', accessMaxiCoach: false, accessFalcon: true },
+  { username: 'CBARRUETA', password: 'Pass1234', role: 'Lider', accessMaxiCoach: false, accessFalcon: true },
+  { username: 'NESCOBAR', password: 'Pass1234', role: 'Lider', accessMaxiCoach: false, accessFalcon: true },
+  { username: 'LAGUILAR', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'MCORTES', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'DJGARCIA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'JEESPINOZA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'NGARCIA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'JIJARA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'MMARIN', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'HAMUNOZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'JSALDAÑA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'CVAZQUEZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'EBARBOSA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'JCAMARILLO', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'DCARRILLO', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'MECOLIN', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'LDELACRUZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'LFLORES', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'AARMIN', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'LAHERNANDEZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'FLOPEZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'JCMIRANDA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'TLUNA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'ENARVAEZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'RORTEGAD', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'APOZOS', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'EPROAL', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'JCSANCHEZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'JSANCHEZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'JSANTOS', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'RDELACRUZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'LFORES', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'AIHERNANDEZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'LLOPEZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'LMACHORRO', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'VIMENDOZA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'ARAMIREZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'MSALDIVAR', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'AGALVARDO', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'ECRUZCD', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'LKHERRERA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'VLOPEZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'SORAMIREZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'SVAZQUEZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'GMORALES', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'MOROPEZA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'RRESENDIZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'ACAGUILAR', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'JBARRUETA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'JESCALANTE', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'AGOMEZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'AHERNANDEZD', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'LLAZARO', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'MMATEOS', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'AJANTONIO', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'IGARCIA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'CGONZALEZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'HGONZALEZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'CFHERNANDEZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'SAMORALES', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'RMORALES', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'CPARADA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'ODREYES', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'VALDAZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'MALMEYDA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'JRCANTO', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'ADURAN', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'AESTRELLA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'TGEUAN', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'JGUTIERREZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'MAMARTINEZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'EOY', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'JPOOL', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'ASANCHEZO', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'ESANTOYO', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'JDOMINGUEZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'FFONSECA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'JMMACEDONIO', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'NMARTINEZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'ASANTOS', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'SCHAVEZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'JAHERRERA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'PRMORALES', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'JRAMIREZM', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'ALTORRES', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'FJALMENDRA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'ACABRERA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'VCANO', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'RMADARIAGA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'SJPERALTA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'AASALAS', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'AVALENCIA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'ECARDENAS', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'VGUTIERREZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'ECHERNANDEZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'MROJAS', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'JOTRUJILLO', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'AALARADO', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'GARIAS', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'MDELACRUZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'BAROMERO', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'PDELACRUZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'JYGARCIA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'AJMORALES', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'EZNATAREN', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'MAOCAMPO', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'ZRUIZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'JDGONZALEZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'DOCHOA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'RREYES', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'HSANCHEZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'OCTORRES', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'RAVILES', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'ICILIA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'PCRUZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'BGOMEZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'RHERRERA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'MMHERRERA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'JJOAQUIN', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'RLORENZO', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'CNMINOR', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'RJORGE', password: 'Pass1234', role: 'Lider', accessMaxiCoach: false, accessFalcon: true },
+  { username: 'GHERNANDEZF', password: 'Pass1234', role: 'Lider', accessMaxiCoach: false, accessFalcon: true },
+  { username: 'HVAZQUEZ', password: 'Pass1234', role: 'Lider', accessMaxiCoach: false, accessFalcon: true },
+  { username: 'MMACIAS', password: 'Pass1234', role: 'Lider', accessMaxiCoach: false, accessFalcon: true },
+  { username: 'VNAVARRO', password: 'Pass1234', role: 'Lider', accessMaxiCoach: false, accessFalcon: true },
+  { username: 'ESORIAM', password: 'Pass1234', role: 'Lider', accessMaxiCoach: false, accessFalcon: true },
+  { username: 'EBETANCOURT', password: 'Pass1234', role: 'Lider', accessMaxiCoach: false, accessFalcon: true },
+  { username: 'LELOPEZ', password: 'Pass1234', role: 'Lider', accessMaxiCoach: false, accessFalcon: true },
+  { username: 'CAIRIBE', password: 'Pass1234', role: 'Lider', accessMaxiCoach: false, accessFalcon: true },
+  { username: 'ECRUZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'EJFLORES', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'MLGONZALEZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'EMHERNANDEZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'FMENDOZA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'MBSANDOVAL', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'MMTORRES', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'DMVILLEGAS', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'EVILLEGAS', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'SLVILLEGAS', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'FAMATON', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'RAGARCIA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'KGARCIA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'MAGARCIA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'CGOMEZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'AMAGAÑA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'SMONREAL', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'NVAZQUEZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'ARPEREZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'RMCHAVEZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'RGAYTANG', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'RGONZÁLEZP', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'RGUERREROL', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'JDGUTIERREZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'EMACIAS', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'CMARTINEZR', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'SMARTINEZR', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'AMULLER', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'ISANCHEZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'MFACOSTA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'ECARMONA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'GCOVARRUBIA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'RDELUNA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'JMGALINDO', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'CGUERRERO', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'RGUERRERO', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'NPJIMENEZA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'YRAMIREZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'GHVILLALPAND', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'VMAMEZCUA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'JCENDEJAS', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'JLCHAVEZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'ECHIMAL', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'JCORDERO', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'LCRUZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'PGAONA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'AMGONZALEZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'PGGONZALEZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'IGUTIERREZR', password: 'Pass1234', role: 'Lider', accessMaxiCoach: false, accessFalcon: true },
+  { username: 'JHERNANDEZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'YDHERNANDEZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'SIBARRA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'MLOPEZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'LMIRANDA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'BAMONDRAGOI', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'OMONTIEL', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'EMONTOYA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'AMORALES', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'NMORENO', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'ARAMIREZH', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'ESANCHEZC', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'SGARCIA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'SVELAZQUEZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'JVILLASAN', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'IRAMIREZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'IJDIAZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'FCRUZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'AGODINEZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'AGONZALEZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'ALEYVA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'HPACHECO', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'MROMULO', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'SAGUILERA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'MOCHOA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'CDPULIDO', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'JVILLALPANDO', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'MAZAMORA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'RFERNANDEZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'LCOTA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'LXJIMENEZ', password: 'Pass1234', role: 'Lider', accessMaxiCoach: false, accessFalcon: true },
+  { username: 'RMORALESS', password: 'Pass1234', role: 'Lider', accessMaxiCoach: false, accessFalcon: true },
+  { username: 'RVALDIVIEZO', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'JFUENTES', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'AEROJAS', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'RLECHUGA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'PVAVALOS', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'VHARMENGOD', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'MVALENTIN', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'CHGUERRERO', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'CMURGA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'TVCARMONA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'ODOMINGUEZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'AAJOYA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'LMAAGANA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'MAISPURO', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'LCROQUE', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'RNVILLAREAL', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'JCMARCHENA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'PGLOZANO', password: 'Pass1234', role: 'Admin', accessMaxiCoach: true, accessFalcon: true },
+  { username: 'JCPACHECO', password: 'Pass1234', role: 'Lider', accessMaxiCoach: false, accessFalcon: true },
+  { username: 'DROMAN', password: 'Pass1234', role: 'Admin', accessMaxiCoach: true, accessFalcon: true },
+  { username: 'JRDEJESUS', password: 'Pass1234', role: 'Lider', accessMaxiCoach: false, accessFalcon: true },
+  { username: 'PDALVARADO', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'EAMARQUEZM', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'NGESTRADA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'FAESTRADA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'KHERNANDEZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'VTMARTINEZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'EMROBLES', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'MAROBLES', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'JOROMAN', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'JARELLANO', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'DAMORA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'SPGARDUNO', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'JAHERNANDEZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'MRJUAREZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'MIGNACIO', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'RDWALLES', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'JSOTO', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'PMORALES', password: 'Pass1234', role: 'Admin', accessMaxiCoach: true, accessFalcon: true },
+  { username: 'JGERONIMO', password: 'Pass1234', role: 'Lider', accessMaxiCoach: false, accessFalcon: true },
+  { username: 'MGOMEZ', password: 'Pass1234', role: 'Lider', accessMaxiCoach: false, accessFalcon: true },
+  { username: 'RHERVERT', password: 'Pass1234', role: 'Lider', accessMaxiCoach: false, accessFalcon: true },
+  { username: 'MVAZQUEZ', password: 'Pass1234', role: 'Lider', accessMaxiCoach: false, accessFalcon: true },
+  { username: 'DBBENITEZ', password: 'Pass1234', role: 'Lider', accessMaxiCoach: false, accessFalcon: true },
+  { username: 'NALDAZABA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'RAVILA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'FCERON', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'NCRUZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'CFERNANDEZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'OGAMBOA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'FJGARCIA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'VCHERNANDEZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'JENINO', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'VCPEREZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'MPEREZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'ROLGUIN', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'CIROQUE', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'CALONDRA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'RSORIA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'AWONG', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'MLBORVONIO', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'MDIAZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'BAGARCIAG', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'IDHERNANDEZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'MJUAREZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'GMEDRANO', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'EMENDOZA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'ARROSADO', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'LRUIZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'EISANCHEZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'JBOCANEGRA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'LCHAN', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'MACOBOS', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'RGALLEGOSG', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'MAGERONIMO', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'JFGONZALEZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'RAHERNANDEZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'JGHERNANDEZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'JCHERNANDEZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'LISIDORO', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'ALOPEZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'MLUNA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'AGARCIAM', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'MARTEAGA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'JPINEDA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'ARUIZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'JNEHEMIAS', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'ACURIEL', password: 'Pass1234', role: 'Lider', accessMaxiCoach: false, accessFalcon: true },
+  { username: 'MMARTINEZ', password: 'Pass1234', role: 'Lider', accessMaxiCoach: false, accessFalcon: true },
+  { username: 'JCONTRERAS', password: 'Pass1234', role: 'Lider', accessMaxiCoach: false, accessFalcon: true },
+  { username: 'MSANCHEZ', password: 'Pass1234', role: 'Lider', accessMaxiCoach: false, accessFalcon: true },
+  { username: 'EGUEVARA', password: 'Pass1234', role: 'Lider', accessMaxiCoach: false, accessFalcon: true },
+  { username: 'RGTORRES', password: 'Pass1234', role: 'Lider', accessMaxiCoach: false, accessFalcon: true },
+  { username: 'SCORTES', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'MGDIAS', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'VESCAMILLA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'CEJUAREZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'GAPORTAL', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'MARUIZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'MSOLORZANO', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'ATORRES', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'CHERNANDEZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'HVRAUL', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'TMONREAL', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'PRAMIREZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'JVALENZUELA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'AVELAZQUEZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'LPZAMORA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'MAGALINDO', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'BLUNA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'ALOLVERA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'FAVILLA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'EALVARADO', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'RBENITEZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'JLCHAVEZC', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'JCORTEZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'LLARA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'SMARTINEZM', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'SIIBARRA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'ZLSALAZAR', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'KVSANCHEZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'YRSANCHES', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'VSEGOVIANO', password: 'Pass1234', role: 'Admin', accessMaxiCoach: true, accessFalcon: true },
+  { username: 'IAALARCON', password: 'Pass1234', role: 'Lider', accessMaxiCoach: false, accessFalcon: true },
+  { username: 'LACHAVARRIA', password: 'Pass1234', role: 'Lider', accessMaxiCoach: false, accessFalcon: true },
+  { username: 'JILOPEZ', password: 'Pass1234', role: 'Lider', accessMaxiCoach: false, accessFalcon: true },
+  { username: 'OMALDONADO', password: 'Pass1234', role: 'Lider', accessMaxiCoach: false, accessFalcon: true },
+  { username: 'JJQUEMADA', password: 'Pass1234', role: 'Lider', accessMaxiCoach: false, accessFalcon: true },
+  { username: 'JIRIOS', password: 'Pass1234', role: 'Lider', accessMaxiCoach: false, accessFalcon: true },
+  { username: 'JRGONZALEZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'MAARRIAGA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'BPBARRERA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'JBERMUDEZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'MCCASTRO', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'OCONTRERASF', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'VMGALAVIZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'RGONZALEZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'RHERNANDEZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'NHURTADO', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'DISLAS', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'IMORALES', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'LPALMA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'JARAMIREZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'JRAMIREZS', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'RSALGUERO', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'ISANDOVAL', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'MSUAREZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'AYTOVAR', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'GACHAPARRO', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'JCCHAVEZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'LBCRUZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'DHERNADEZG', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'CMAGANA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'RMARTINEZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'AOCHOA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'JSALAS', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'VALENCIA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'BSCONTRERAS', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'BARMENDARIZ', password: 'Pass1234', role: 'Lider', accessMaxiCoach: false, accessFalcon: true },
+  { username: 'NSGONZALEZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'JUROMERO', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'NCROMERO', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'CZANELLA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'YAYALA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'CJCASTILLO', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'RGALLEGOS', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'JHUERTA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'VIMARTINEZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'JEPUGA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'MFLORES', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'JALDERETEM', password: 'Pass1234', role: 'Admin', accessMaxiCoach: true, accessFalcon: true },
+  { username: 'KVARGAS', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'GGARCIA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'SYAVENDAÑO', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'MVELAZQUEZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'VEDURAN', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'IDIAZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'NOSORIA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'JASILVA', password: 'Pass1234', role: 'Lider', accessMaxiCoach: false, accessFalcon: true },
+  { username: 'EDLOPEZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'GROLVERA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'EMRODRIGUEZ', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'FMISMAEL', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'HRJONATHAN', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'SABUESOS', password: 'Pass1234', role: 'Admin', accessMaxiCoach: true, accessFalcon: true },
+  { username: 'SFABIOLA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'HHGUADALUPE', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'FMANGELES', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'MPREYNALDO', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'CPRIEGO', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'PFRACHAB', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'RCVICTOR', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'BMALBERTO', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'FADAVID', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'FNAVARRETE', password: 'Pass1234', role: 'Lider', accessMaxiCoach: false, accessFalcon: true },
+  { username: 'SLGERARDO', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'PLOPANTZI', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'DPANGEL', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'TPOPOCA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'PSERRANO', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'CMMICAELA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'TNOE', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'TGFRANCISO', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'MRJAVIER', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'GRALFONSO', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'PLWALDYR', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'AVALEJANDRO', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'JMSAYURI', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'DGHECTOR', password: 'Pass1234', role: 'Lider', accessMaxiCoach: false, accessFalcon: true },
+  { username: 'CMARMANDO', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'SCARBEY', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'SJSAUL', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'CSGUADALUPE', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'PRJOSELINE', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'RHVIRIDIANA', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'NCJAVIER', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'PLHECTOR', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'PCJOSE', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'PCROBERTO', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'ASJESUS', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'GHHECTOR', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: false },
+  { username: 'RJOBED', password: 'Pass1234', role: 'Agente', accessMaxiCoach: true, accessFalcon: true },
+  { username: 'Jack', password: 'Artemisa17*', role: 'Admin', accessMaxiCoach: true, accessFalcon: true }
+];
+
+export const themes = {
+    'basico': { name: 'Básico', color: '#1a3a5f' },
+    'oscuro': { name: 'Oscuro', color: '#2c5aa0' },
+    'whatsapp': { name: 'WhatsApp', color: '#075E54' },
+    'vampiro': { name: 'Vampiro', color: '#8B0000' },
+    'amanecer': { name: 'Amanecer', color: '#FEF3C7' },
+    'corporativo': { name: 'Corporativo', color: '#047857' },
+} as const;
+
+// Fix: Corrected the type definition for themeVoiceProfiles using Record<K, T>
+export const themeVoiceProfiles: Record<keyof typeof themes, VoiceProfile> = {
+    'basico': { voiceName: 'Zephyr' }, // Default
+    'oscuro': { voiceName: 'Kore' },
+    'whatsapp': { voiceName: 'Puck' },
+    'vampiro': { voiceName: 'Charon' },
+    'amanecer': { voiceName: 'Zephyr' },
+    'corporativo': { voiceName: 'Fenrir' },
+};
+
+export const legalFrameworkResponse = {
+  maxiCoachGuide: `
+      <h3>¡Bienvenido a Maxi-Coach, tu asistente inteligente para cobranza en campo!</h3>
+      <p>Aquí te explico cómo puedes usar este módulo para maximizar tu efectividad:</p>
+
+      <h3>Paso 1: Configura los Datos del Caso (Panel Superior Izquierdo)</h3>
+      <ul>
+          <li><strong>Dictamen Principal:</strong> Selecciona el estado actual del crédito (Ej. "Promesa de pago", "Negativa de pago", "Siniestro"). Esto filtrará las preguntas críticas relevantes.</li>
+          <li><strong>Tipo de Gestión:</strong> Indica si estás haciendo una gestión "Telefónica" o "Campo". La IA adaptará algunos consejos.</li>
+          <li><strong>Días de Mora:</strong> Elige el rango de días de mora del cliente. La IA ajustará la urgencia y el tono de las estrategias.</li>
+      </ul>
+
+      <h3>Paso 2: Consulta las Preguntas Críticas (Panel Superior Derecho)</h3>
+      <ul>
+          <li><strong>Buscador:</strong> Usa el campo de búsqueda para encontrar rápidamente preguntas sobre situaciones específicas (Ej. "moto robada", "cliente agresivo").</li>
+          <li><strong>Filtros Automáticos:</strong> Las preguntas se filtrarán automáticamente según el "Dictamen Principal" que hayas seleccionado, mostrándote solo las más relevantes.</li>
+          <li><strong>Selecciona una Pregunta:</strong> Haz clic en cualquier pregunta para que Maxi-Coach te ofrezca una estrategia detallada y guiones de conversación para esa situación.</li>
+      </ul>
+
+      <h3>Paso 3: Interactúa con el Chat</h3>
+      <ul>
+          <li><strong>Escribe tus dudas:</strong> Si la pregunta que buscas no está en el panel, simplemente escribe tu consulta en el área de texto inferior y Maxi-Coach te responderá.</li>
+          <li><strong>Guías Detalladas:</strong> Las respuestas de Maxi-Coach incluirán un "Objetivo Clave", "Estrategias" y "Frases Clave" que puedes usar en tus interacciones.</li>
+          <li><strong>Audio (TTS):</strong> Haz clic en el icono de reproducción (<i class="fas fa-play-circle"></i>) junto a las respuestas del asistente para escucharlas en voz alta. ¡Útil en campo!</li>
+          <li><strong>Marco Legal:</strong> Si preguntas por el "marco legal" o "regulatorio", Maxi-Coach te mostrará las prácticas permitidas y prohibidas por CONDUSEF.</li>
+      </ul>
+
+      <h3>Paso 4: Limpia y Reinicia</h3>
+      <ul>
+          <li><strong>Botón de Limpieza (<i class="fas fa-broom"></i>):</strong> Cuando termines con un caso o quieras empezar de nuevo, haz clic en el botón de la escoba en la barra superior. Esto limpiará el chat y reseteará la configuración.</li>
+      </ul>
+
+      <p class="key-objective" style="margin-top: 1.5rem; border-color: var(--primary-color);">
+          <i class="fas fa-hand-sparkles" style="color: var(--primary-color);"></i> <strong>Recuerda:</strong> Maxi-Coach está aquí para potenciar tus habilidades. Úsalo como tu guía constante para tomar las mejores decisiones en cada gestión. ¡Éxito en tus recuperaciones!
+      </p>
+  `,
+  falconGuide: `
+      <h3>¡Bienvenido a Falcon, tu centro de comando para líderes de equipo!</h3>
+      <p>Este módulo está diseñado para darte las herramientas para desarrollar y motivar a tu equipo de gestores. Así es como puedes usarlo:</p>
+
+      <h3>Paso 1: Consulta las Preguntas Clave (Panel Superior Derecho)</h3>
+      <ul>
+          <li><strong>Buscador:</strong> Utiliza el campo de búsqueda para encontrar temas de liderazgo específicos (Ej. "coaching efectivo", "motivar equipo", "malas prácticas").</li>
+          <li><strong>Selecciona una Pregunta:</strong> Haz clic en cualquier pregunta para obtener orientación detallada sobre cómo abordar ese desafío de liderazgo.</li>
+          <li><strong>Pilares de Liderazgo:</strong> Las respuestas incluirán "Objetivos Clave" y "Estrategias" pensadas para tu rol.</li>
+      </ul>
+
+      <h3>Paso 2: Genera Planes de Acción (Botón en la Barra Superior)</h3>
+      <ul>
+          <li><strong>Botón "Generar Plan de Acción" (<i class="fas fa-rocket"></i>):</strong> Haz clic en este botón en la barra superior para abrir un formulario.</li>
+          <li><strong>Ingresa Datos del Gestor:</strong> Rellena los campos con el nombre del gestor, créditos asignados, gestionados, de prioridad y <strong>sin gestión</strong>, así como su desempeño general.</li>
+          <li><strong>Plan Personalizado:</strong> Falcon generará un plan de acción sugerido para ese gestor, enfocado en sus necesidades y áreas de mejora. Este plan aparecerá en el chat.</li>
+      </ul>
+
+      <h3>Paso 3: Interactúa con el Chat</h3>
+      <ul>
+          <li><strong>Escribe tus dudas:</strong> Si necesitas abordar un tema específico o una situación particular con un gestor, escribe tu consulta en el área de texto inferior.</li>
+          <li><strong>Guías y Estrategias:</strong> Falcon te ofrecerá respuestas con "Objetivos Clave" y "Estrategias" y "Planes de Monitoreo" para aplicar con tu equipo.</li>
+          <li><strong>Audio (TTS):</strong> Haz clic en el icono de reproducción (<i class="fas fa-play-circle"></i>) junto a las respuestas del asistente para escucharlas en voz alta.</li>
+      </ul>
+
+      <h3>Paso 4: Limpia y Reinicia</h3>
+      <ul>
+          <li><strong>Botón de Limpieza (<i class="fas fa-broom"></i>):</strong> Para borrar la conversación y empezar una nueva sesión, haz clic en el botón de la escoba en la barra superior.</li>
+      </ul>
+
+      <p class="key-objective" style="margin-top: 1.5rem; border-color: var(--primary-color);">
+          <i class="fas fa-chart-line" style="color: var(--primary-color);"></i> <strong>Tu Rol:</strong> Falcon es tu aliado para construir un equipo de alto rendimiento. Utiliza sus herramientas para una gestión más estratégica y efectiva.
+      </p>
+  `,
+};
+export const agentKnowledgeBase: KnowledgeBase = {
+  initial: "¡Hola! Soy Maxi-Coach para Gestores. Puedes configurar los detalles del caso y seleccionar una pregunta crítica o escribir tu duda.",
+  fallback: { // MODIFIED: New structure for diverse fallbacks
+      generalOffTopic: [
+          "Eso está un poco fuera de mi alcance, pero puedo ayudarte con cualquier estrategia de cobranza. ¿Hay algún caso de cliente que te esté dando problemas?",
+          "Mi especialidad es la cobranza de motocicletas. Si tienes dudas sobre cómo abordar a un cliente, estoy listo para asistir. ¿Qué situación te interesa revisar hoy?",
+          "Entiendo. Para maximizar tu efectividad en campo, concéntrate en las técnicas de cobranza. ¿Qué tipo de objeción de cliente te gustaría que analicemos?",
+          "Como tu Maxi-Coach, mi misión es pulir tus habilidades de cobranza. Si necesitas apoyo con un deudor o una estrategia, ¡aquí estoy!",
+          "Aunque no puedo ayudarte con eso, estoy aquí para guiarte en el arte de la cobranza. ¿Hay alguna pregunta de cliente difícil que quieras que revisemos?"
+      ],
+      collectionGuidance: [
+          "Comprendo que a veces la cobranza puede ser un desafío. ¿Te gustaría que revisemos cómo preparar tu próxima llamada o abordar una objeción común?",
+          "Es normal tener dudas en situaciones difíciles. Estoy aquí para darte las herramientas. ¿Qué paso del proceso de cobranza te genera más incertidumbre?",
+          "Mi propósito es hacerte más efectivo. Si te sientes inseguro con alguna táctica, podemos practicar. Por ejemplo, ¿cómo manejarías a un cliente que dice 'no tengo dinero'?",
+          "No te preocupes si no sabes cómo cobrar. Para eso estoy aquí. ¿Quieres que veamos el guion para un cliente que rompió su promesa de pago?",
+          "Para mejorar, lo primero es identificar el área. ¿Qué parte de tu proceso de cobranza crees que necesita más apoyo o una nueva estrategia?"
+      ],
+  },
+  faqs: {
+    "¿Cómo respondo a 'no tengo dinero'?": { 
+        dictamen: ["Negativa de pago", "Promesa de pago", "Sin contacto"],
+        keywords: ["pagar", "sin dinero", "negativa", "no puedo pagar", "fondos insuficientes", "no tengo cómo pagar", "problemas económicos", "situación financiera difícil", "no me alcanza", "sin recursos"],
+        summary: "Ante la negativa, diagnostica el perfil del deudor. Si es 'Honesto' (avergonzado), valida su emoción y ofrece un pago mínimo. Si es 'Estratégico' (desafiante), enfoca la conversación en recordarle que está a punto de perder su moto y toda su inversión, explicando las consecuencias como la recuperación del activo.", 
+        objetivoClave: "Lograr un PAGO MÍNIMO para restablecer el compromiso y evitar el escalamiento.",
+        detail: {
+            strategy: "El diagnóstico del perfil del deudor es clave para adaptar tu comunicación. No todos los 'no tengo dinero' son iguales. Debes escuchar activamente las señales verbales y no verbales para identificar si estás ante alguien que quiere pero no puede, o alguien que puede pero no quiere.",
+            phrases: "<b>Para el 'Deudor Honesto':</b> 'Entiendo perfectamente que la situación es difícil. Para evitar más cargos, ¿sería posible cubrir un monto simbólico hoy?'<br><br><b>Para el 'Deudor Estratégico':</b> 'Comprendo. Debo informarle que sin un acuerdo, el protocolo indica iniciar la recuperación del activo, perdiendo no solo la moto, sino toda su inversión. Podemos evitarlo con un pago parcial.'"
+        }
+    },
+    "¿Cómo aseguro una promesa de pago de forma efectiva?": {
+        dictamen: ["Promesa de pago"],
+        keywords: ["promesa", "pago", "asegurar", "acuerdo de pago", "convenio", "me va a pagar", "se comprometió a pagar", "cerrar promesa", "confirmar pago", "formalizar", "compromiso", "detalles de pago"],
+        summary: "¡Bien! Una promesa es un avance. Tu misión ahora es convertirla en un compromiso real. Exige siempre los 3 elementos clave: <strong>Fecha, Hora y Monto exacto</strong>. Sin estos tres, la promesa no es sólida.",
+        objetivoClave: "TRANSFORMAR una intención verbal en un COMPROMISO tangible y medible.",
+        detail: {
+            strategy: "Una promesa sin detalles es solo una forma de posponer el problema. Al pedir Fecha, Hora y Monto, creas un 'micro-contrato' psicológico. Esto te da una base sólida para el seguimiento y te permite diferenciar un compromiso real de una táctica evasiva.",
+            phrases: "<b>1. El Cierre del Compromiso:</b> 'Perfecto, Sr. [Apellido]. Para registrarlo correctamente en el sistema, necesito los detalles. ¿Qué día exactamente realizará el pago? ¿A qué hora? ¿Y cuál será el monto exacto?'<br><br><b>2. Prueba de Fuego (¿Es una Promesa Real?):</b><br><u>Señal de Promesa Débil:</u> El cliente responde con vaguedad ('La próxima semana', 'En cuanto pueda'). Si es así, debes insistir en la especificidad.<br><u>Señal de Promesa Fuerte:</u> El cliente te da los detalles sin dudar, o incluso pregunta '¿A qué cuenta lo deposito?' o '¿Me puede dar un número de referencia?'. Esto indica una intención real."
+        }
+    },
+    "¿Qué hago si el cliente rompió su promesa de pago?": {
+        dictamen: ["Promesa de pago", "Negativa de pago"],
+        keywords: ["promesa rota", "incumplida", "no pagó", "quedó de pagar", "convenio incumplido", "acuerdo no cumplido", "incumplimiento de pago", "rompió el trato", "falló al pago"],
+        summary: "Una promesa rota es una señal de alerta. Debes escalar la presión de forma controlada. Vuelve a centrar la conversación en la pérdida de credibilidad del cliente y las consecuencias inmediatas del incumplimiento. El objetivo ya no es una promesa, es un pago.",
+        objetivoClave: "REESTABLECER la urgencia y la seriedad del compromiso, obteniendo un PAGO INMEDIATO, no otra promesa.",
+        detail: {
+            strategy: "El incumplimiento de un convenio invalida la confianza. Tu postura debe cambiar de negociador a ejecutor del siguiente paso del protocolo. La clave es comunicar la seriedad y la inevitabilidad de la consecuencia si no hay una acción inmediata.",
+            phrases: "<b>1. Declare el Hecho:</b> 'Sr. [Apellido], reviso el sistema y veo que teníamos un acuerdo de pago para ayer que no se registró.'<br><b>2. Escale la Consecuencia:</b> 'El incumplimiento de un convenio es serio y me obliga a escalar el caso a la siguiente fase de recuperación.'<br><b>3. Cree Urgencia (Última Oportunidad):</b> 'Hoy es la última oportunidad para solucionarlo directamente conmigo. Para detener el proceso, necesito que el pago se realice en este momento.'<br><b>4. Exija Acción, no Palabras:</b> '¿El pago lo realizará con tarjeta o en efectivo en la sucursal más cercana?'"
+        }
+    },
+     "¿Qué hago al recibir un comprobante de pago?": {
+        dictamen: ["Promesa de pago"],
+        keywords: ["pago recibido", "pagó", "depositó", "transfirió", "comprobante de pago", "ya pagué", "he recibido el comprobante", "screenshot de pago", "confirmación de pago", "validar pago"],
+        summary: "¡Excelente trabajo! Has logrado lo más difícil. Ahora, tu prioridad es asegurar ese pago. <strong>1. Monitorea el sistema</strong> hasta que se refleje; recuerda que algunas transferencias pueden ser reversibles. <strong>2. Valida el comprobante:</strong> revisa la fecha, hora y busca la clave de rastreo (SPEI) para confirmar su autenticidad. ¡No te confíes de una simple imagen!",
+        objetivoClave: "VERIFICAR Y ASEGURAR que el pago sea real y se refleje en el sistema.",
+        detail: {
+            strategy: "Un comprobante no es un pago, es una promesa de pago. Tu gestión no termina hasta que el dinero está en la cuenta. Los deudores estratégicos pueden usar comprobantes falsos o transferencias programadas que luego cancelan. Tu ojo crítico aquí es fundamental.",
+            phrases: "<b>Al recibir el comprobante:</b> 'Gracias por compartirlo. Lo adjuntaré al expediente y estaré monitoreando el sistema para confirmar la aplicación. En cuanto se refleje, su cuenta quedará actualizada.' (Esto comunica profesionalismo y que seguirás atento)."
+        }
+    },
+    "¿Qué hacer si ya pagó el cliente y no se ha reflejado en sistema?": {
+        dictamen: ["Promesa de pago", "Negativa de pago"],
+        keywords: ["pago no reflejado", "sistema no aparece", "no se ve el pago", "pago no aplicado", "pago fantasma", "problema con pago", "pago extraviado", "reclamo de pago"],
+        summary: "Si un pago no se refleja en el sistema después de 12 horas hábiles, considéralo una alerta crítica. Debes contactar al cliente de inmediato para aclarar la situación. El tiempo es crucial para evitar que el problema escale.",
+        objetivoClave: "ACLARAR la discrepancia y, si es necesario, RECUPERAR el pago de forma inmediata.",
+        detail: {
+            strategy: "Actúa con urgencia pero sin acusar. Aborda la conversación como una 'revisión de discrepancia'. Puede ser un error genuino del banco o del cliente, pero también puede ser una táctica dilatoria. Tu objetivo es obtener una resolución, no una excusa.",
+            phrases: "<b>Guion de Contacto:</b> 'Sr. [Apellido], le contacto para dar seguimiento a su pago. Aún no lo vemos reflejado en nuestro sistema, lo cual es inusual. ¿Podría por favor verificar con su banco si la transferencia fue exitosa? A veces hay errores que podemos resolver juntos si actuamos rápido.'"
+        }
+    },
+    "¿Qué hago si el cliente se niega a entregar la moto?": {
+        dictamen: ["Moto recuperada", "Negativa de pago"],
+        keywords: ["moto", "motocicleta", "entregar", "devolver la unidad", "negarse a entregar", "niega la moto", "no quiere entregar la moto", "resistencia a la recuperación", "activo", "recuperación forzosa", "se quiere quedar con la moto"],
+        summary: "Esta es una táctica de alta resistencia. No discutas sobre la posesión. Debes volver a centrar la conversación inmediatamente en la pérdida inminente, recordándole al cliente que la moto representa su inversión y está a punto de perderla por completo, junto con el dinero ya pagado.",
+        objetivoClave: "Utilizar la RECUPERACIÓN INMINENTE DEL ACTIVO como palanca para forzar un PAGO INMEDIATO y evitar la pérdida de su inversión.",
+        detail: {
+            strategy: "La clave es no caer en una discusión sobre 'quién tiene derecho a la moto'. El enfoque debe ser 100% sobre las consecuencias económicas para el cliente. Él debe percibir que su negativa a entregarla no le da poder, sino que acelera la pérdida total de su dinero.",
+            phrases: "<b>1. Mantén la Calma y la Firmeza:</b> 'Entiendo que no quiera entregar la moto, es su inversión. Precisamente por eso estoy aquí.'<br><b>2. Conecta la Negativa con la Pérdida:</b> 'Al no haber un pago, el sistema me instruye a recuperar el activo. Si eso pasa, usted pierde la moto y todo el dinero que ya invirtió en ella.'<br><b>3. Presenta la Única Salida:</b> 'Hoy es la última oportunidad para solucionarlo directamente conmigo. Para detener el proceso, necesito que el pago se realice en este momento.'<br><b>4. Exija Acción, no Palabras:</b> '¿El pago lo realizará con tarjeta o en efectivo en la sucursal más cercana?'"
+        }
+    },
+     "¿Cómo manejar a un cliente agresivo u hostil?": { 
+        dictamen: ["Negativa de pago", "Sin contacto"],
+        keywords: ["agresivo", "hostil", "enojado", "molesto", "grosero", "violento", "gritos", "insultos", "desescalada", "cliente gritando", "amenaza verbal", "violencia verbal", "cliente alterado", "comportamiento inaceptable"],
+        summary: "Aplica el protocolo de 'Desescalada'. Mantén la calma, no respondas a la agresión, y baja tu tono de voz. Valida su emoción ('Percibo que está muy molesto') y redirige la conversación a un objetivo común: buscar una solución. Si la agresión escala, tu seguridad es la prioridad; retírate, documenta y reporta.", 
+        objetivoClave: "DESESCALAR la hostilidad para poder redirigir la conversación hacia una SOLUCIÓN DE PAGO.",
+        detail: {
+            strategy: "La agresión es una táctica para desviar la atención de la deuda. Tu objetivo es no engancharte en la emoción y mantener el control del marco de la conversación. La validación no significa estar de acuerdo, significa reconocer su estado emocional para luego poder redirigirlo.",
+            phrases: "<b>1. Silencio activo:</b> (Deja que se desahogue sin interrumpir).<br><b>2. Validación verbal:</b> 'Entiendo por qué se siente así.' o 'Percibo que esta situación le ha causado mucha frustración.'<br><b>3. Establecer límites:</b> 'Para que pueda ayudarle, necesitamos mantener una conversación respetuosa.'<br><b>4. Ofrecer una salida (y una consecuencia implícita):</b> 'Si no podemos hablar ahora, documentaré la visita como fallida y el caso escalará, lo cual quiero evitar.'"
+        }
+    },
+     "¿Qué hago si alega fallas en la moto?": { 
+        dictamen: ["Negativa de pago", "Siniestro"],
+        keywords: ["moto falla", "moto descompuesta", "moto no sirve", "problema mecánico", "garantía de la moto", "defecto de fábrica", "problema con el producto", "servicio técnico"],
+        summary: "Es crucial separar las dos obligaciones contractuales. Valida su frustración con el vehículo, pero aclara que el contrato de financiamiento es independiente de la garantía del fabricante. Para poder ejercer sus derechos sobre la moto (reparación), el crédito debe estar al corriente. Posiciona el pago como un requisito para proteger su inversión.", 
+        objetivoClave: "Lograr el PAGO posicionándolo como un requisito para que el deudor PROTEJA SU INVERSIÓN y sus derechos de garantía.",
+        detail: {
+            strategy: "Este es un argumento de desvío común. No debes debatir la calidad de la moto. Tu rol es ser el experto en el contrato de financiamiento. Debes crear un puente lógico entre el pago del crédito y su capacidad para resolver el problema mecánico.",
+            phrases: "<b>Guion Estratégico:</b> 'Lamento mucho el problema con su moto. Usted tiene derecho a hacer válida su garantía. De hecho, para que pueda exigir esa reparación, es fundamental que el activo siga siendo legalmente suyo y eso se garantiza manteniendo el crédito al corriente. Aseguremos el pago para proteger su inversión y sus derechos.'"
+        }
+    },
+      "¿Qué hago si el cliente chocó o le robaron la moto?": {
+          dictamen: ["Siniestro", "Negativa de pago"],
+          keywords: ["chocó", "accidente", "siniestro", "robada", "robaron la moto", "moto ya no sirve", "pérdida total", "moto chocada", "seguro de moto", "incidente", "percance"],
+          summary: "Entiendo la situación. Es un imprevisto serio. Para poder guiarte correctamente, necesito un dato clave: ¿El cliente contaba con una póliza de seguro vigente al momento del incidente?",
+          type: 'interactiveSurvey',
+          data: {
+              question: "Entiendo la situación. Es un imprevisto serio. Para poder guiarte correctamente, necesito un dato clave: ¿El cliente contaba con una póliza de seguro vigente al momento del incidente?",
+              options: [
+                  { text: 'Sí, tiene seguro', trigger: 'chocó-con-seguro' },
+                  { text: 'No, no tiene seguro', trigger: 'chocó-sin-seguro' }
+              ]
+          }
+      },
+      "chocó-con-seguro": {
+          dictamen: ["Siniestro"],
+          keywords: ["chocó", "accidente", "siniestro", "robada", "robaron la moto", "moto ya no sirve", "pérdida total", "moto chocada", "seguro de moto", "incidente", "percance"],
+          summary: "Perfecto. Si hay un seguro vigente, la situación se simplifica enormemente. Tu objetivo ya no es cobrarle al cliente, sino gestionar el cobro a través de la aseguradora. Debes actuar como un facilitador.",
+          objetivoClave: "OBTENER la póliza de seguro para iniciar el trámite de pago con la aseguradora.",
+          detail: {
+              strategy: "La deuda será cubierta por la aseguradora. Tu única tarea es recolectar la documentación necesaria y escalarla al área correspondiente. Sé empático y colaborativo con el cliente, ya que ahora es tu aliado para resolver el caso.",
+              phrases: "<b>Guion de Colaboración:</b> 'Sr. [Apellido], lamento mucho lo que pasó. La buena noticia es que al tener seguro, podemos resolver esto directamente con la aseguradora para liquidar el adeudo. Para iniciar el trámite, ¿podría por favor proporcionarme el número de póliza y el nombre de la compañía de seguros? Con eso, nosotros nos encargamos del resto.'"
+          }
+      },
+      "chocó-sin-seguro": {
+          dictamen: ["Siniestro", "Negativa de pago"],
+          keywords: ["chocó", "accidente", "siniestro", "robada", "robaron la moto", "moto ya no sirve", "pérdida total", "moto chocada", "seguro de moto", "incidente", "percance"],
+          summary: "Esta es una situación delicada y requiere tacto pero firmeza. Debes separar la tragedia del vehículo de la obligación financiera. El crédito es por el dinero prestado, no por la moto. Tu objetivo sigue siendo recuperar el adeudo.",
+          objetivoClave: "LOGRAR UN CONVENIO DE PAGO, aclarando que la deuda del crédito es independiente del estado del vehículo.",
+          detail: {
+              strategy: "Es crucial que el cliente entienda que su obligación contractual con la financiera continúa. Valida su emoción, pero no dejes que la excusa del accidente detenga la gestión de cobro. Posiciona la negociación como la única vía para evitar que el problema financiero se agrave.",
+              phrases: "<b>1. Valida la Emoción:</b> 'Entiendo que esta es una situación muy difícil y lamento sinceramente lo que le ocurrió a su vehículo.'<br><b>2. Separa las Obligaciones:</b> 'Es importante aclarar que nuestro contrato es por un crédito financiero, no directamente por la moto. La deuda del préstamo persiste independientemente de lo que haya sucedido con el activo.'<br><b>3. Redirige a la Solución:</b> 'Mi objetivo es ayudarle a encontrar una solución para liquidar este crédito y que esto no se convierta en un problema mayor en su historial. Analicemos qué plan de pagos podemos establecer para resolverlo.'"
+          }
+      },
+      "¿Qué hago si mi cliente cambió de domicilio?": {
+          dictamen: ["Cambio de domicilio", "Sin contacto"],
+          keywords: ["domicilio", "se mudó", "cambió de casa", "ya no vive ahí", "nueva dirección", "se fue de su casa", "cambio de residencia", "localizar deudor", "encontrar nueva ubicación", "skip tracing", "buscar nueva ubicación", "rastrear"],
+          summary: "¡Alerta Crítica! Un cambio de domicilio requiere acción inmediata para evitar que la cuenta se vuelva irrecuperable. Activa un plan de 2 frentes: 1. Inicia el protocolo de investigación 'Skip Tracing' para localizar la nueva dirección. 2. Contacta al aval para notificarle la situación y activar su responsabilidad legal de pago.",
+          objetivoClave: "RE-LOCALIZAR al deudor y/o ASEGURAR el pago a través del aval.",
+          detail: {
+              strategy: "No puedes perder tiempo. Debes actuar como detective para encontrar al cliente y como ejecutor para asegurar el pago con las garantías que tienes. Sigue estos dos caminos en paralelo.<br><b>Protocolo 1: Skip Tracing (Investigación):</b> Realiza un sondeo ampliado con vecinos/tiendas usando un guion legal para obtener pistas sobre la nueva ubicación.<br><b>Protocolo 2: Activación del Garante (Ejecución):</b> Contacta al aval inmediatamente. Explica que no localizas al deudor y que, como garante, es su responsabilidad ayudar o asumir el pago. Utiliza el guion detallado de '¿Cómo le cobro legalmente al aval?' para este proceso.",
+              phrases: "<b>Para Sondeo Ampliado:</b> 'Buenos días. Busco al señor [Apellido] para entregarle una documentación importante de un trámite. ¿De casualidad sabrá a dónde se mudó o un número donde pueda localizarlo?'"
+          }
+      },
+      "¿Cómo le cobro legalmente al aval/garante?": {
+          dictamen: ["Cambio de domicilio", "Sin contacto", "Contacto con tercero"],
+          keywords: ["aval", "garante", "fiador", "cobrar aval", "responsable solidario", "obligado solidario", "pagar el aval", "cobrarle al fiador", "responsabilidad de garantía", "deudor secundario"],
+          summary: "El aval o garante es 100% responsable de la deuda. Tu gestión se divide en dos fases: primero, contactarlo como un colaborador para localizar al deudor. Si eso falla, notificarle formalmente que debe asumir los pagos pendientes según el contrato que firmó.",
+          objetivoClave: "ACTIVAR la responsabilidad contractual del aval para recuperar el pago.",
+          detail: {
+              strategy: "La clave es la escalada controlada. No empieces exigiendo; empieza pidiendo ayuda. Esto te da una postura más razonable. Si la colaboración no funciona, tu tono cambia a una notificación formal, basada estrictamente en los términos legales del contrato de garantía.",
+              phrases: "<b>Fase 1: Enfoque Colaborativo:</b> 'Sr. [Aval], le contacto porque el Sr. [Deudor] no ha cumplido con sus pagos y no hemos podido localizarlo. Como usted es su garante y persona de confianza, ¿podría ayudarnos a comunicarnos con él?'<br><br><b>Fase 2: Notificación Formal de Obligación:</b> 'Sr. [Aval], dado que el titular es ilocalizable y el crédito presenta un adeudo, le notifico formalmente que, de acuerdo al contrato que usted firmó como obligado solidario, a partir de este momento es su responsabilidad cubrir los pagos para mantener la cuenta al corriente. ¿Cómo desea proceder con el pago pendiente de [Monto]?'"
+          }
+      },
+      "¿Cliente alega 'prestanombre' (crédito no es suyo)?": {
+          dictamen: ["Prestanombre", "Negativa de pago", "Jurídico"],
+          keywords: ["prestanombre", "no es mío", "no es mi crédito", "usurpación de identidad", "fraude de identidad", "crédito a nombre de otro", "yo no saqué el crédito", "no lo conozco", "fraude", "engañado"],
+          summary: "¡Alerta de Fraude! Esto es un caso de 'prestanombre'. Tu gestión tiene dos objetivos paralelos e innegociables: 1. Cobrarle a la persona cuyo nombre está en el contrato, ya que es el responsable legal y quien será afectado en Buró de Crédito. 2. Investigar y documentar quién es el usuario real de la moto.",
+          objetivoClave: "COBRAR al deudor legal y DOCUMENTAR al usuario real para escalar el caso a Fraudes.",
+          detail: {
+              strategy: "No detengas la cobranza. La deuda es legalmente de la persona que firmó. Debes ser muy claro sobre las consecuencias en su historial crediticio. Al mismo tiempo, debes obtener toda la información posible sobre el 'prestanombre' para que el área correspondiente pueda actuar. Tu reporte en el CRM es vital.",
+              phrases: "<b>1. Para el Deudor Legal (quien firmó):</b> 'Entiendo la situación que me comenta, Sr./Sra. [Apellido]. Sin embargo, es muy importante que sepa que el contrato está legalmente a su nombre. Esto significa que la responsabilidad del pago y cualquier afectación en su Buró de Crédito recae directamente sobre usted. Para proteger su historial, debemos resolver el pago pendiente hoy mismo.'<br><br><b>2. Para Obtener Información del Usuario Real:</b> 'Para que nuestro equipo legal pueda investigar este fraude y ayudar a resolver su situación, es fundamental que me proporcione todos los datos que tenga de la persona que está usando la moto: nombre completo, dónde trabaja, dónde vive, cualquier información es útil. Esto es para documentar el caso correctamente.'"
+          }
+      },
+      "¿Qué hago si no encuentro a nadie en el domicilio?": {
+          dictamen: ["Sin contacto", "Cambio de domicilio"],
+          keywords: ["nadie en domicilio", "casa sola", "nadie abre la puerta", "no hay nadie en casa", "visita fallida", "no contestan", "no abren", "localizar cliente", "cliente no encontrado", "sondeo", "pista", "se esconde"],
+          summary: "Una visita sin contacto no es una visita perdida. Es una oportunidad para recolectar inteligencia. Debes documentar la visita, realizar un sondeo discreto con vecinos y dejar una notificación de visita profesional. Esto maximiza la probabilidad de éxito en el siguiente intento.",
+          objetivoClave: "MAXIMIZAR la información obtenida de una visita fallida para asegurar el contacto en el siguiente intento.",
+          detail: {
+              strategy: "El objetivo es transformar un 'no' en información. Cada detalle cuenta para construir un perfil del cliente y sus hábitos. La persistencia inteligente es más efectiva que la insistencia ciega. Usa cada visita para refinar tu próxima acción.",
+              phrases: "<b>Para Sondeo con Vecinos:</b> 'Buenos días. Busco al señor [Apellido] para entregarle una documentación importante de un trámite. ¿Podría confirmarme si todavía reside aquí?'<br><br><b>Texto de Notificación de Visita:</b> 'Estimado(a) Sr./Sra. [Apellido], hemos realizado una visita a su domicilio para tratar un asunto administrativo importante relacionado con su cuenta. Por favor, comuníquese urgentemente al [Número]. Atte: [Tu Nombre], Gestor Asignado.'"
+          }
+      },
+      // NUEVA ENTRADA DE FAQ PARA CLIENTE EVASIVO
+      "¿Qué hacer si el cliente se esconde en su domicilio?": {
+          dictamen: ["Sin contacto", "Negativa de pago"],
+          keywords: ["esconde", "evita visitas", "no sale", "oculta", "ilocalizable en domicilio", "cliente evasivo", "hacer guardia", "esperar", "persistencia", "presión psicológica", "no contesta", "ignora"],
+          summary: "Cuando un deudor se esconde activamente, está enviando una señal de resistencia. Tu objetivo es transformar esa evasión en un contacto, aplicando una presión persistente e inteligente que genere la 'necesidad de salir' o responder. La estrategia se adapta a los días de mora.",
+          objetivoClave: "Romper el patrón de evasión a través de una presencia estratégica y generar incomodidad psicológica al deudor.",
+          moraSpecificDetail: { // Contenido dinámico según los días de mora
+              "1 a 15": {
+                  strategy: `Para esta etapa, tu presencia debe ser persistente pero discreta. Realiza visitas en horarios no convencionales (muy temprano, a la hora de la comida, al final de la jornada). Mantén una distancia prudente pero visible, esperando pacientemente. No toques repetidamente; tu sola presencia es un mensaje. La idea es que el deudor sienta tu vigilancia sin sentirse acosado. La incomodidad psicológica es sutil, pero efectiva para romper su patrón de evasión.`,
+                  phrases: `<b>Al esperar (tono audible pero no directo):</b> 'Señor [Apellido], sé que está en casa. Solo espero unos minutos para conversar sobre su crédito. No se preocupe, no me iré hasta tener una respuesta.'`
+              },
+              "15 a 30": {
+                  strategy: `En esta mora, la estrategia de 'hacer guardia' se vuelve más directa y prolongada. Tu presencia debe ser evidente e insistente. Si el deudor se esconde, puedes esperar por periodos más largos. La "presión psicológica" aumenta si sabe que no te irás fácilmente. Puedes realizar un sondeo ampliado con vecinos (con el pretexto legal) mientras esperas para demostrar tu persistencia y aumentar la incomodidad del deudor.`,
+                  phrases: `<b>Al esperar y hacer notar tu presencia (tono firme):</b> 'Señor [Apellido], como no me atiende, estaré aquí hasta que podamos hablar. Su crédito necesita atención urgente y no puedo irme sin dejar el mensaje. Su incomodidad aumentará con cada minuto que me ignore.'`
+              },
+              "30+": {
+                  strategy: `En mora 30+, el deudor debe sentir la urgencia crítica y la inminencia de la escalada a jurídico. Tu guardia debe ser intensa, persistente y comunicarle claramente que el tiempo para negociar se acaba. Considera una presencia más 'evidente' y cercana (ej. esperando cerca de su vehículo). La meta es que la incomodidad de esconderse sea mayor que la de enfrentarte y resolver. Documenta meticulosamente cada minuto de tu presencia para el expediente.`,
+                  phrases: `<b>Comunicando la escalada inminente (tono directo y resolutivo):</b> 'Sr. [Apellido], el tiempo para negociar directamente se está agotando. Si no hablamos hoy, el proceso de recuperación del activo avanza sin posibilidad de detenerlo. Su decisión de esconderse solo agrava su situación y me obliga a documentar su evasión. Estoy aquí hasta que resuelva.'`
+              }
+          },
+          // Proporcionar un detalle genérico como fallback si moraSpecificDetail no coincide por alguna razón, o para otras FAQs
+          detail: { 
+              strategy: "La persistencia inteligente es clave. Si sabe que estás ahí, eventualmente tendrá que confrontar la situación. No te limites a un solo horario. La información de los vecinos es oro.",
+              phrases: "'He realizado varias visitas en diferentes horarios. Es importante que hablemos sobre su crédito. Dejaré esta notificación para que me contacte urgentemente.'"
+          }
+      },
+      "¿Qué hago si un cliente es 'ilocalizable'?": {
+          dictamen: ["Sin contacto", "Cambio de domicilio"],
+          keywords: ["ilocalizable", "no contesta", "no responde", "desaparecido", "no lo encuentro", "sin contacto", "localizar", "ubicación desconocida", "extraviado", "skip tracing", "buscar deudor", "rastrear"],
+          summary: "Cuando un cliente es 'ilocalizable', tu rol cambia de 'cobrador' a 'investigador'. Debes ejecutar un protocolo de 'skip tracing' para generar nuevas pistas de contacto, combinando sondeo en campo, revisión de garantes y dejando 'cebos' de contacto. El objetivo es traer la cuenta de vuelta a una gestión activa.",
+          objetivoClave: "REACTIVAR el contacto con el deudor a través de métodos de investigación indirecta para reanudar la gestión.",
+          detail: {
+              strategy: "Un cliente ilocalizable requiere una estrategia metódica y documentada. Sigue estos pasos:<br><b>1. Sondeo Ampliado:</b> Vuelve al domicilio, pero habla con más personas (conserje, tiendas cercanas). El objetivo es encontrar una pista: un nuevo trabajo, un familiar, un horario.<br><b>2. Contacto con Garante/Aval:</b> Revisa el expediente. Si hay un aval, es tu mejor fuente de información. Contáctalo con el pretexto de 'actualizar datos'.<br><b>3. Dejar 'Cebos' de Contacto:</b> Deja notificaciones de visita en el domicilio y con cualquier familiar, usando un lenguaje profesional y ambiguo que genere urgencia para que te contacten.<br><b>4. Documentar y Escalar:</b> Registra cada intento fallido. Si después de estos pasos no hay contacto, documenta el caso como 'ilocalizable' para que el sistema lo escale a la siguiente etapa de recuperación.",
+              phrases: "<b>Para Sondeo Ampliado:</b> 'Disculpe, busco al Sr. [Apellido] para entregarle una documentación importante de un trámite. ¿Sabe si se mudó o dónde podría encontrarlo? Es importante para cerrar su expediente.'<br><br><b>Para Contactar al Garante:</b> 'Sr. [Aval], mi nombre es [Tu Nombre]. Le llamo para solicitar su apoyo en contactar al Sr. [Deudor] para un asunto administrativo. ¿Sería tan amable de confirmarme su número actual o dónde puedo localizarlo?'"
+          }
+      },
+      "¿Cómo interrogo a vecinos sin revelar la deuda?": { 
+          dictamen: ["Sin contacto", "Cambio de domicilio", "Contacto con tercero"],
+          keywords: ["vecinos", "tercero", "localizar cliente", "buscar deudor", "encontrar cliente", "dónde vive", "información del paradero", "paradero de deudor", "discreto", "verificación de domicilio", "confirmar residencia"],
+          summary: "Actúa como un 'verificador', no como un 'cobrador'. Usa un pretexto neutral y legal que no mencione la deuda. El objetivo único es obtener información de localización. Pregunta si aún vive allí o si conocen una dirección de reenvío. La discreción es clave para cumplir con la ley y evitar quejas.", 
+          objetivoClave: "OBTENER INFORMACIÓN de localización precisa para un futuro contacto efectivo con el deudor.",
+          detail: {
+              strategy: "Tu identidad profesional es clave. Preséntate como alguien que necesita verificar información para completar un trámite. Esto genera colaboración en lugar de sospecha. La legalidad es tu escudo: nunca menciones la deuda, el dinero o la empresa financiera.",
+              phrases: "<b>Guion Principal:</b> 'Buenos días. Busco al señor [Apellido] para entregarle una documentación importante de un trámite. ¿Podría confirmarme si todavía reside aquí?'<br><br><b>Si dicen que ya no vive ahí:</b> '¿De casualidad sabrá a dónde se mudó o un número donde pueda localizarlo? Es para poder finalizar su trámite y que no quede inconcluso.'"
+          }
+      },
+       "¿Qué le puedo decir legalmente a un familiar?": { 
+          dictamen: ["Contacto con tercero", "Sin contacto"],
+          keywords: ["familiar", "tercero", "mamá del deudor", "papá del deudor", "esposa del deudor", "hermano del deudor", "legal", "condusef", "recado", "pariente", "encontré a un familiar", "salió su esposa", "no lo encontré pero habló su familiar", "vecino me dijo"],
+          summary: "La normativa de CONDUSEF es extremadamente estricta: está prohibido revelar la existencia, monto o naturaleza de la deuda a cualquier tercero. Tu único objetivo legal es dejar un recado de contacto. Identifícate y solicita que el deudor se comunique a un número específico para tratar un 'asunto importante'.", 
+          objetivoClave: "DEJAR UN RECADO de contacto efectivo que cumpla con la ley y motive al deudor a llamar.",
+          detail: {
+              strategy: "Menos es más. Cualquier información adicional que proporciones a un tercero aumenta el riesgo de una queja legal. Sé breve, profesional y ambiguo sobre la naturaleza del asunto. Tu objetivo no es informar al familiar, sino usarlo como un canal para que el deudor se comunique contigo.",
+              phrases: "<b>Guion Permitido por Ley:</b> 'Buenos días, mi nombre es [Tu Nombre] de [Nombre de la Empresa]. Busco al Sr./Sra. [Apellido del Deudor]. ¿Sería tan amable de informarle que necesito que se comunique conmigo al teléfono [Número] para tratar un asunto administrativo importante? Le agradezco mucho su ayuda.'"
+       }
+       },
+       "¿Qué hago si mi cliente falleció?": {
+            dictamen: ["Defunción"],
+            keywords: ["murió", "falleció", "defunción", "fallecimiento", "finado", "difunto", "mortalidad", "deudor muerto", "óbito", "pereció", "expiró", "muerte del cliente"],
+            summary: "Esta es una situación delicada. Tu rol cambia de cobrador a facilitador. Expresa tus condolencias a la familia y explica con empatía que, para cancelar el crédito por completo, necesitas el acta de defunción. Este documento es tu 'comprobante de pago' para cerrar el caso.",
+            objetivoClave: "OBTENER el acta de defunción para CANCELAR el crédito y cerrar el caso.",
+            detail: {
+                strategy: "La gestión debe ser 100% empática y respetuosa. Tu único objetivo es obtener el documento que cierra la cuenta. No presiones, ofrece ayuda y facilita el proceso para la familia en un momento difícil. Recuerda, sin el acta, la cuenta sigue activa y afectará tus métricas.",
+                phrases: "<b>1. Expresa Condolencias Sinceras:</b> 'Antes que nada, por favor acepte mis más sinceras condolencias en nombre de la empresa. Lamento mucho su pérdida.'<br><br><b>2. Explica el Proceso con Claridad y Empatía:</b> 'Entiendo que es un momento muy difícil. Solo me comunico para informarles que, según el contrato, el crédito queda cancelado. El único paso administrativo que necesitamos para formalizarlo es obtener una copia del acta de defunción.'<br><br><b>3. Facilita la Entrega:</b> 'Puede enviarme una fotografía del documento o, si lo prefiere, puedo pasar a recoger una copia cuando usted me indique. Lo que sea más sencillo para usted. Con eso, el trámite queda finalizado.'"
+            }
+        },
+        // Contacto con tercero (Expanded)
+        "¿Cómo aseguro que el mensaje llegue al deudor a través de un tercero?": {
+            dictamen: ["Contacto con tercero", "Sin contacto", "Cambio de domicilio"],
+            keywords: ["mensaje", "tercero", "asegurar mensaje", "que llegue el recado", "comunicación efectiva", "aviso al deudor", "recado importante"],
+            summary: "Cuando dejas un recado con un tercero, tu objetivo es generar la suficiente intriga y urgencia (sin revelar la deuda) para que el deudor te contacte. Sé profesional y explícale al tercero la importancia del 'asunto personal' sin entrar en detalles.",
+            objetivoClave: "Motivar al tercero para que transmita el mensaje con la seriedad necesaria y el deudor te contacte.",
+            detail: {
+                strategy: "Enfatiza al tercero que es un 'asunto confidencial y urgente'. Pide que el deudor se comunique a la brevedad. Pregunta al tercero si hay un horario específico en que el deudor suela estar disponible, o si hay otra forma de contacto que conozca.",
+                phrases: "'Por favor, dígale al Sr./Sra. [Apellido del Deudor] que me urge hablar con él/ella sobre un tema muy importante. Mi nombre es [Tu Nombre] y mi número es [Número]. Agradezco su ayuda para que el mensaje no se pierda.'"
+            }
+        },
+        "¿Qué hago si el tercero se niega a cooperar?": {
+            dictamen: ["Contacto con tercero", "Sin contacto", "Cambio de domicilio"],
+            keywords: ["tercero se niega", "no coopera", "no quiere ayudar", "resistencia del tercero", "no me da información"],
+            summary: "Si un tercero se niega a cooperar, mantén la calma y el profesionalismo. No presiones ni insistas de forma agresiva. Explica que tu visita es por un 'asunto administrativo rutinario' y que tu empresa tiene el deber de notificar. Documenta su negativa y busca otra vía de contacto o visita en otro horario.",
+            objetivoClave: "Obtener información mínima o dejar un rastro, sin generar conflicto ni revelar la deuda.",
+            detail: {
+                strategy: "Tu objetivo es no escalar la situación. Un tercero no tiene obligación legal de ayudarte. Si hay resistencia, retírate amablemente y busca otras fuentes de información (vecinos diferentes, negocios cercanos, etc.).",
+                phrases: "'Comprendo. Solo me aseguro de que la información se entregue correctamente. Si llega a verlo, ¿podría darle mi tarjeta o mi número? Es vital para el trámite.' (Si aplica dejar una tarjeta)."
+            }
+        },
+        // Moto recuperada (NEW CATEGORY)
+        "¿Qué impacto tiene la recuperación en el historial crediticio del cliente?": {
+            dictamen: ["Moto recuperada", "Jurídico"],
+            keywords: ["impacto", "historial crediticio", "crédito", "buró de crédito", "recuperación", "consecuencias negativas", "afectación de buró", "crédito dañado"],
+            summary: "La recuperación de un activo por incumplimiento de pago tendrá un impacto negativo severo en el historial crediticio del cliente, afectando su capacidad para obtener futuros créditos. Se registrará como un 'crédito irrecuperable' o 'cuenta castigada', lo cual permanecerá en su historial por varios años. Es una consecuencia grave que debes poder comunicar.",
+            objetivoClave: "Comunicar claramente las graves consecuencias de la recuperación en el historial crediticio para motivar un pago antes del proceso.",
+            detail: {
+                strategy: "Utiliza este punto como una palanca de presión antes de la recuperación final. Una vez recuperado, es una explicación. Antes, es un motivador. La gente valora su historial crediticio, y la amenaza de dañarlo irreversiblemente es un fuerte incentivo.",
+            phrases: "'Sr. [Apellido], debo informarle que si la moto es recuperada, esto tendrá un impacto muy grave en su Buró de Crédito, afectando su capacidad de obtener cualquier otro financiamiento en el futuro. Podemos evitarlo si realiza un pago ahora.'"
+            }
+        },
+        "¿Qué hago si la moto recuperada presenta daños o faltantes?": {
+            dictamen: ["Moto recuperada"],
+            keywords: ["daños en moto", "faltantes en moto", "moto recuperada dañada", "estado de la moto", "deterioro del activo", "partes faltantes", "desperfectos"],
+            summary: "Si la moto recuperada presenta daños o faltantes no documentados previamente, debes notificar inmediatamente a tu supervisor y al departamento de recuperación. Es crucial comparar el estado actual con la documentación inicial. Esto puede tener implicaciones legales o afectar el valor de reventa del activo.",
+            objetivoClave: "Documentar y reportar cualquier discrepancia en el estado del activo recuperado para proteger a la empresa.",
+            detail: {
+                strategy: "La documentación fotográfica y el inventario son vitales aquí. Si la moto está dañada, el costo de reparación podría sumarse a la deuda del cliente si se comprueba su responsabilidad. Es un punto que debe manejar el área legal.",
+                phrases: "'He notado que la moto presenta [daño/faltante] que no estaba documentado. Procederé a reportarlo de inmediato para su evaluación.'"
+            }
+        },
+        // Jurídico (NEW CATEGORY)
+        "¿Cuándo es el momento adecuado para escalar un caso a jurídico?": {
+            dictamen: ["Jurídico", "Negativa de pago", "Prestanombre", "Moto recuperada"],
+            keywords: ["escalar a jurídico", "momento adecuado para legal", "demanda", "acción judicial", "proceso legal", "cobranza legal", "agotar vías", "irrecuperable"],
+            summary: "Un caso se escala a jurídico cuando se han agotado todas las vías de cobranza extrajudicial (telefónica, campo, mediación) y existe una clara negativa de pago, ilocalización persistente, fraude comprobado (prestanombre) o alta resistencia a la recuperación del activo. Es una decisión estratégica basada en la viabilidad legal y el monto de la deuda.",
+            objetivoClave: "Identificar los criterios clave para una escalada efectiva y justificada al área jurídica.",
+            detail: {
+                strategy: "La decisión de ir a jurídico no es emocional, es pragrática. Implica costos y tiempo. Asegúrate de que el expediente esté completo, con todos los intentos de contacto, promesas rotas, y cualquier evidencia que fortalezca el caso legal.",
+                phrases: "'Hemos agotado todas las instancias, el cliente muestra una negativa firme y el monto justifica la inversión legal. Es momento de escalar a jurídico.'"
+            }
+        },
+        "¿Qué información es crucial para el expediente jurídico?": {
+            dictamen: ["Jurídico", "Prestanombre", "Moto recuperada"],
+            keywords: ["información crucial", "expediente jurídico", "documentos legales", "evidencia para demanda", "historial de cobranza", "pruebas para jurídico", "contrato", "pagarés"],
+            summary: "Para un expediente jurídico sólido, necesitas el contrato original firmado, pagarés o títulos de crédito, el historial detallado de pagos y adeudos, todas las bitácoras de gestión de cobranza (con fechas y resultados), notificaciones enviadas al cliente, y cualquier evidencia de fraude (prestanombre) o resistencia a la recuperación del activo.",
+            objetivoClave: "Compilar un expediente jurídico completo e irrefutable para maximizar las posibilidades de éxito legal.",
+            detail: {
+                strategy: "La fuerza de un caso jurídico reside en la documentación. Cada interacción, cada promesa, cada notificación debe estar registrada. Los detalles son vitales. Colabora con el equipo legal para asegurar que no falte nada.",
+                phrases: "'Necesitamos el contrato, todos los pagarés, el estado de cuenta y cada detalle de nuestras gestiones. La calidad de la información es clave.'"
+            }
+        },
+        "¿Cómo manejo la amenaza de demanda por parte del cliente?": {
+            dictamen: ["Jurídico", "Negativa de pago", "Contacto con tercero"],
+            keywords: ["amenaza de demanda", "cliente demanda", "queja legal", "condusef", "abogado del cliente", "intimidación legal", "amenaza de litigio"],
+            summary: "Si un cliente te amenaza con una demanda o queja (CONDUSEF), mantén la calma y el profesionalismo. Recuérdale que la empresa opera bajo un marco legal estricto. Ofrece la vía formal para que presente su queja y, al mismo tiempo, redirige la conversación a la solución de su adeudo. Documenta la amenaza y notifica a tu supervisor.",
+            objetivoClave: "Mantener el control de la conversación, redirigir a la solución y documentar la amenaza para protección de la empresa.",
+            detail: {
+                strategy: "No te dejes intimidar. La amenaza es una táctica. Tu rol es seguir el protocolo. La empresa tiene abogados para manejar demandas. Tu enfoque es el cobro. Comunica seguridad en la legalidad de la operación.",
+                phrases: "'Entendido. Quedamos a la espera de la comunicación de su abogado. Nosotros también operamos bajo un estricto marco legal. Mi objetivo es que evitemos llegar a esas instancias resolviendo su pago. ¿Cómo procedemos?'"
+            }
+        },
+        "¿Cuál es mi rol como gestor una vez que un caso es jurídico?": {
+            dictamen: ["Jurídico", "Moto recuperada"],
+            keywords: ["rol gestor jurídico", "caso legal", "después de demanda", "fase legal", "apoyo a jurídico", "acciones legales", "gestión legal"],
+            summary: "Una vez que un caso es jurídico, tu rol como gestor de campo cambia. Ya no realizarás acciones de cobranza directa. Tu función principal será de apoyo logístico al área legal: verificación de domicilios para notificaciones, entrega de documentos, o recolección de información específica que el abogado requiera. Toda acción debe ser coordinada y autorizada por el equipo jurídico.",
+            objetivoClave: "Convertirse en un apoyo logístico eficiente para el departamento legal, siguiendo sus indicaciones estrictas.",
+            detail: {
+                strategy: "No tomes iniciativas en casos jurídicos. Tu experiencia en campo es valiosa, pero ahora bajo la dirección legal. La coordinación es clave para no entorpecer el proceso legal.",
+                phrases: "'Mi rol es apoyar al equipo legal. Si necesitan verificar un domicilio o entregar un documento, me lo harán saber y lo ejecutaré.'"
+            }
+        },
+        "¿Cómo manejo la objeción 'Mi abogado se encargará de esto'?": {
+            dictamen: ["Jurídico", "Negativa de pago"],
+            keywords: ["abogado se encargará", "legal", "hablar con abogado", "discutir con abogado", "contacto legal", "no quiero hablar sin abogado"],
+            summary: "Si el cliente menciona que su abogado se encargará, mantén un tono neutral y profesional. Puedes responder que estás a la espera de ser contactado por su representante legal, pero que mientras tanto, el adeudo sigue generando cargos y la empresa tiene la obligación de gestionar el cobro. No negocies con el cliente directamente sobre temas legales.",
+            objetivoClave: "Reafirmar la persistencia de la deuda y la necesidad de una solución, sin confrontar al abogado.",
+            detail: {
+                strategy: "No te involucres en disputas con abogados. Tu punto de contacto sigue siendo el cliente hasta que recibas una comunicación oficial del abogado. Documenta la conversación. El objetivo es mantener el balón en su cancha para que él o su abogado actúen.",
+                phrases: "'Entendido. Quedamos a la espera de la comunicación de su abogado. Nosotros también operamos bajo un estricto marco legal. Mi objetivo es que evitemos llegar a esas instancias resolviendo su pago. ¿Cómo procedemos?'"
+            }
+        },
+        // Negativa de pago (Expanded)
+        "¿Cliente alega desempleo/crisis económica?": {
+            dictamen: ["Negativa de pago", "Promesa de pago"],
+            keywords: ["desempleo", "crisis económica", "sin trabajo", "no tengo ingresos", "situación económica", "dificultades financieras", "recursos limitados"],
+            summary: "Valida la situación del cliente con empatía, pero rápidamente redirige la conversación a la búsqueda de soluciones creativas. Pregunta sobre fuentes de ingreso alternativas, apoyo familiar, o la posibilidad de un pago mínimo simbólico para mantener el compromiso. El objetivo es mover al cliente de la excusa a la acción, por pequeña que sea.",
+            objetivoClave: "Transformar una excusa de fuerza mayor en una oportunidad para un micro-pago o plan de reestructuración inicial.",
+            detail: {
+                strategy: "No te quedes atascado en el problema del cliente. Tu rol es facilitar una salida. La gente a menudo tiene otras fuentes de dinero o apoyo que no consideran para la deuda. Ayúdales a pensar en ello.",
+                phrases: "'Comprendo que la situación económica es difícil. ¿Hay alguna forma, por mínima que sea, de hacer un abono para mantener tu cuenta activa y evitar un problema mayor?' o '¿Contarías con algún apoyo familiar o algún ingreso extra, aunque sea temporal, para cubrir una parte?'"
+            }
+        },
+        "¿Cómo refuto 'solo pagaré lo que debo de la moto, no los intereses'?": {
+            dictamen: ["Negativa de pago", "Jurídico"],
+            keywords: ["intereses", "solo debo la moto", "no pagaré intereses", "monto original", "refutar objeción", "solo quiero pagar capital", "costo de financiamiento", "cargos adicionales"],
+            summary: "Aclara firmemente que el contrato de crédito incluye tanto el capital como los intereses acordados. Explica que los intereses son parte del costo del financiamiento y que al no pagarlos, el saldo sigue pendiente. No entres en debate, reafirma los términos contractuales y las consecuencias del incumplimiento total.",
+            objetivoClave: "Educar al cliente sobre sus obligaciones contractuales y redirigirlo a pagar el monto total adeudado.",
+            detail: {
+                strategy: "Esta es una táctica común para reducir el monto. Tu rol es defender el contrato. Sé claro y conciso. Si el cliente insiste, explícale que si se niega a pagar los intereses, la deuda sigue activa y generará más cargos, además del impacto en su historial.",
+                phrases: "'Sr. [Apellido], el monto total adeudado, incluyendo los intereses generados por el financiamiento, es el que figura en su estado de cuenta. Negarse a pagar una parte no detiene el proceso de cobranza ni evita el registro en Buró de Crédito.'"
+            }
+        },
+        "¿Qué hago si el cliente me ignora constantemente?": {
+            dictamen: ["Sin contacto", "Negativa de pago"],
+            keywords: ["ignora", "no contesta", "no abre", "evita contacto", "esquiva", "ilocalizable", "silencio del deudor", "no responde llamadas", "visitas ignoradas"],
+            summary: "La ignorancia es una forma de resistencia. Debes diversificar tus canales de contacto y aumentar la frecuencia sin caer en acoso. Si es gestión de campo, varía los horarios de visita. Si es telefónica, intenta mensajes de texto o WhatsApp (si es permitido), o contacta al aval. Documenta cada intento.",
+            objetivoClave: "Romper la barrera del silencio y establecer un canal de comunicación efectivo.",
+            detail: {
+                strategy: "La persistencia inteligente es clave. No hagas lo mismo una y otra vez esperando un resultado diferente. Analiza los patrones de 'no respuesta' y ajusta tu táctica. El aval es un recurso vital en estos casos.",
+                phrases: "'He notado que no hemos logrado comunicarnos. Es crucial que hablemos sobre su crédito. Visitaré su domicilio en un horario diferente o contactaré a su aval para asegurarme de que reciba el mensaje.'"
+            }
+        },
+        "¿Cómo manejar la objeción 'Ya estoy pagando otras deudas'?": {
+            dictamen: ["Negativa de pago", "Promesa de pago"],
+            keywords: ["otras deudas", "pagando otros compromisos", "prioridades de pago", "mucho dinero que pagar", "manejo de deudas", "múltiples créditos", "presupuesto apretado"],
+            summary: "Reconoce que el cliente tiene múltiples responsabilidades, pero redirige la conversación a la importancia crítica de tu crédito. Pregunta sobre el 'orden de prioridad' que le da a sus deudas y explica las consecuencias específicas de no priorizar la tuya (recuperación, historial crediticio).",
+            objetivoClave: "Elevar la prioridad de tu crédito en la mente del deudor, buscando un compromiso de pago.",
+            detail: {
+                strategy: "Este es un intento de desviar la atención. Tu objetivo es hacer que tu deuda sea lo suficientemente 'dolorosa' de ignorar. No compitas con otras deudas, sino muestra por qué la tuya tiene consecuencias más graves o inmediatas.",
+                phrases: "'Entiendo que tiene otros compromisos. Pero, ¿qué prioridad le da a no perder su motocicleta o a evitar un mal historial crediticio? Esas son las consecuencias directas si no logramos un acuerdo hoy.'"
+            }
+        },
+        "¿Qué hacer si el cliente usa un tono de víctima?": {
+            dictamen: ["Negativa de pago"],
+            keywords: ["víctima", "dar pena", "problemas personales", "mala suerte", "desgracia", "pobre", "llora", "manipulación emocional", "excusas"],
+            summary: "Sé empático y valida la emoción, pero no te dejes arrastrar por el dramatismo. Reconoce su dificultad ('Comprendo que la situación es difícil'), pero rápidamente redirige a la responsabilidad del pago y la búsqueda de soluciones. El objetivo es mover al cliente de la queja a la acción, manteniendo tu profesionalismo y el foco en el cobro.",
+            objetivoClave: "Manejar la manipulación emocional del cliente y mantener el enfoque en la solución de pago.",
+            detail: {
+                strategy: "La persona que usa el tono de víctima busca tu compasión para evadir el pago. Tu profesionalismo es clave para no caer en su juego. No ofrezcas soluciones que no estén en tu alcance y evita dar pretextos.",
+                phrases: "'Lamento que se sienta así, pero mi objetivo es ayudarle a solucionar su adeudo para que este problema no crezca. ¿Qué opciones podemos explorar?'"
+            }
+        },
+        // Siniestro (Expanded)
+        "¿Qué hago si el seguro se niega a pagar o a cubrir el siniestro?": {
+            dictamen: ["Siniestro", "Jurídico"],
+            keywords: ["seguro se niega", "no quieren pagar", "no cubren siniestro", "problema con aseguradora", "rechazo de seguro", "cobertura negada", "disputa con seguro"],
+            summary: "Si el seguro se niega a cubrir, es una situación crítica. Debes informar al cliente que, dado el rechazo del seguro, la obligación de pago del crédito recae nuevamente sobre él. Es el momento de reactivar la cobranza con el cliente y explorar opciones de reestructuración o convenio, ya que la vía del seguro está cerrada.",
+            objetivoClave: "Reactivar la cobranza directa con el cliente y buscar un acuerdo de pago tras la negativa del seguro.",
+            detail: {
+                strategy: "Es importante comunicar esta noticia con tacto, pero con firmeza. El cliente debe entender que la empresa no es responsable de la decisión de la aseguradora. El foco vuelve a ser la deuda de su crédito.",
+                phrases: "'Sr. [Apellido], lamentablemente la aseguradora ha rechazado la cobertura. Esto significa que la responsabilidad del crédito recae en usted. Necesitamos urgentemente establecer un plan de pago para evitar mayores consecuencias.'"
+            }
+        },
+        "¿Cómo solicito un reporte de siniestro a la aseguradora?": {
+            dictamen: ["Siniestro"],
+            keywords: ["reporte de siniestro", "aseguradora", "solicitar reporte", "trámite de siniestro", "información del incidente", "folio de siniestro", "número de reclamación"],
+            summary: "Para solicitar un reporte de siniestro a la aseguradora, necesitarás el número de póliza, la fecha y detalles del incidente, y posiblemente una carta de autorización del cliente. Es crucial que el cliente reporte el siniestro a su aseguradora primero, y luego la empresa puede darle seguimiento.",
+            objetivoClave: "Obtener el reporte oficial del siniestro para evaluar la situación y gestionar el cobro.",
+            detail: {
+                strategy: "Actúa como facilitador, pero no como tramitador inicial. El cliente es el primer responsable de su siniestro con el seguro. Una vez que él reporta, puedes intervenir para obtener información.",
+                phrases: "'Sr. [Apellido], para agilizar el proceso, necesitaría que nos proporcione una copia del reporte de siniestro que le entregó la aseguradora y el número de reclamación.'"
+            }
+        },
+        // Defunción (Expanded)
+        "¿Qué sucede si la familia no tiene el acta de defunción?": {
+            dictamen: ["Defunción"],
+            keywords: ["acta de defunción", "no tiene acta", "problema con documento", "familia no tiene acta", "obtener acta", "registro civil", "documento indispensable"],
+            summary: "Si la familia no tiene el acta de defunción, ofréceles orientación sobre cómo obtenerla (Registro Civil). Explica que es un documento indispensable para cancelar el crédito y que, hasta que no se presente, el crédito seguirá activo y generando cargos, lo cual podría afectar el patrimonio familiar.",
+            objetivoClave: "Facilitar a la familia el proceso para obtener el acta de defunción, enfatizando su importancia para el cierre del crédito.",
+            detail: {
+                strategy: "Sé muy empático. Es un momento difícil. No presiones, pero sé claro sobre la necesidad del documento. Ofrece la ayuda que puedas (información sobre dónde ir, números de contacto).",
+                phrases: "'Entiendo que es complicado. El acta de defunción se tramita en el Registro Civil. Si me permiten, puedo darles información sobre cómo obtenerla para poder cerrar el crédito lo antes posible.'"
+            }
+        },
+        // Prestanombre (Expanded)
+        "¿Qué pruebas necesito para el caso de 'prestanombre'?": {
+            dictamen: ["Prestanombre", "Jurídico"],
+            keywords: ["pruebas prestanombre", "evidencia de fraude", "documentar fraude", "identificar usuario real", "testigos", "fotos del usuario", "datos del prestanombre"],
+            summary: "Para documentar un caso de 'prestanombre', necesitas cualquier evidencia que demuestre que la persona que usa la moto no es el titular del crédito: testimonios de vecinos, fotos del usuario real, direcciones alternativas, números de contacto del usuario real, y cualquier declaración del titular que corrobore el fraude.",
+            objetivoClave: "Recopilar evidencia contundente para fortalecer el caso de fraude y la cobranza al titular legal.",
+            detail: {
+                strategy: "Actúa como un investigador, pero siempre dentro del marco legal. No intimides ni acoses. Recolecta hechos y datos. Cada pista es valiosa para el departamento de fraude o legal.",
+                phrases: "'Necesito toda la información posible sobre la persona que realmente usa la moto: dónde trabaja, cómo se llama, fotos, cualquier cosa que ayude a nuestro equipo a documentar el fraude.'"
+            }
+        },
+        "¿Qué implicaciones legales tiene ser 'prestanombre'?": {
+            dictamen: ["Prestanombre", "Jurídico"],
+            keywords: ["implicaciones legales prestanombre", "consecuencias prestanombre", "ley fraude", "historial crediticio afectado", "responsabilidad legal", "cargos por fraude"],
+            summary: "Ser 'prestanombre' implica asumir legalmente la responsabilidad total de la deuda. Las implicaciones incluyen un historial crediticio severamente afectado, la obligación de pago completa del crédito, y posibles acciones legales por parte de la financiera. En casos graves, puede haber cargos por fraude si se comprueba complicidad.",
+            objetivoClave: "Comunicar claramente las graves implicaciones legales y financieras de ser 'prestanombre' para motivar la cooperación.",
+            detail: {
+                strategy: "Este punto es crucial para presionar al titular legal. La gente a menudo subestima las consecuencias de prestar su nombre. Sé directo y factual, sin amenazar, sino informando de la realidad legal.",
+                phrases: "'Al firmar el contrato, usted asumió la responsabilidad total del crédito. Legalmente, la deuda es suya y las consecuencias en su Buró de Crédito serán directas si no se regulariza.'"
+            }
+        },
+        "¿Cómo identificar objeciones falsas vs. reales?": {
+            dictamen: ["Negativa de pago", "Promesa de pago"],
+            keywords: ["objeciones falsas", "objeciones reales", "identificar mentiras", "detectar excusas", "cliente miente", "inconsistencias en objeción", "verdadero motivo del no pago"],
+            summary: "Las objeciones reales suelen ser específicas y acompañadas de detalles. Las falsas son vagas, generales, o el cliente cambia de objeción rápidamente. Para identificarlas, haz preguntas abiertas y escucha las inconsistencias. Una objeción real busca una solución; una falsa busca una excusa.",
+            objetivoClave: "Discernir la verdadera razón del no pago para aplicar la estrategia correcta y no perder el tiempo.",
+            detail: {
+                strategy: "Un buen gestor es un buen 'detector de verdad'. No aceptes la primera objeción. Indaga. Haz que el cliente se 'pinche' con sus propias contradicciones. Si la objeción es real, tendrás una base para negociar. Si es falsa, podrás desenmascararla.",
+                phrases: "'Sr. [Apellido], me dice que no puede pagar. ¿Podría explicarme un poco más qué es lo que específicamente le impide hacerlo en este momento?' (Escucha atentamente los detalles y la coherencia)."
+            }
+        },
+        "¿Qué hacer si el cliente usa lenguaje despectivo?": {
+            dictamen: ["Negativa de pago"],
+            keywords: ["lenguaje despectivo", "ofensivo", "grosero", "malas palabras", "insultos", "falta de respeto", "cliente agresivo verbalmente"],
+            summary: "Al igual que con un cliente agresivo, no respondas con el mismo tono. Mantén la calma, establece un límite claro sobre el respeto en la conversación y redirige a la solución del adeudo. Si el lenguaje persiste y es inaceptable, advierte que documentarás y finalizarás la llamada/visita. Tu dignidad es importante.",
+            objetivoClave: "Mantener la profesionalidad, establecer límites de respeto y no permitir el lenguaje ofensivo.",
+            detail: {
+                strategy: "El lenguaje ofensivo busca provocarte. No caigas en la trampa. Tu rol es mantener el control emocional. Si no hay respeto, no hay conversación productiva.",
+                phrases: "'Sr. [Apellido], para que podamos continuar con esta conversación, le pido que mantengamos un lenguaje respetuoso. Estoy aquí para ayudarle a solucionar su adeudo.'"
+            }
+        },
+        "¿Cómo puedo usar WhatsApp para cobrar? (Legalmente)": {
+            dictamen: ["Telefónica", "Contacto con tercero", "Promesa de pago", "Sin contacto"],
+            keywords: ["whatsapp", "cobrar por whatsapp", "mensaje legal", "chat de cobranza", "contacto digital", "recordatorio de pago por whatsapp"],
+            summary: "WhatsApp puede ser una herramienta poderosa, pero con límites legales. Solo úsalo para recordar fechas de pago, enviar confirmaciones de promesa de pago, o dejar recados de contacto si no hay respuesta telefónica. Nunca reveles el monto o naturaleza de la deuda a terceros ni envíes amenazas. Todo debe ser documentado en la bitácora.",
+            objetivoClave: "Utilizar WhatsApp como un canal de comunicación legal y efectivo para recordar pagos o facilitar contacto.",
+            detail: {
+                strategy: "WhatsApp es un canal de texto y es fácilmente 'evidenciable'. Sé conciso, profesional y cumple con la CONDUSEF. Ideal para recordatorios amigables o para pedir que te contacten.",
+                phrases: "<b>Recordatorio de Pago:</b> 'Hola [Nombre Cliente], un recordatorio amigable de su pago pendiente para el crédito de su motocicleta. Puede realizarlo en [Métodos de Pago]. ¡Que tenga un excelente día!'<br><b>Recado de Contacto:</b> 'Hola [Nombre Cliente], soy [Tu Nombre] de [Empresa]. Necesito que me contacte al [Número] para tratar un asunto administrativo importante. Gracias.'"
+            }
+        },
+        "¿Qué hago si el cliente me bloquea del WhatsApp/teléfono?": {
+            dictamen: ["Sin contacto", "Negativa de pago"],
+            keywords: ["bloquea", "whatsapp bloqueado", "teléfono bloqueado", "ignora mis llamadas", "no contesta teléfono", "evita el contacto", "cliente bloqueó", "sin respuesta"],
+            summary: "Si el cliente te bloquea, es una señal de que está evitando la responsabilidad. Activa inmediatamente otros canales: visita a domicilio (si es posible), contacto con el aval/garante, o intenta con números alternativos registrados. Documenta el bloqueo como 'negativa de contacto'.",
+            objetivoClave: "Reactivar el contacto a través de otros canales y documentar la evasión del deudor.",
+            detail: {
+                strategy: "La persistencia inteligente es clave. No hagas lo mismo una y otra vez esperando un resultado diferente. Analiza los patrones de 'no respuesta' y ajusta tu táctica. El aval es un recurso vital en estos casos.",
+                phrases: "'Dado que no logramos contacto por WhatsApp, procederé a realizar una visita a domicilio. También me pondré en contacto con su aval para asegurarme de que reciba el mensaje.'"
+            }
+        },
+        "¿Cómo negociar un pago parcial si no puede cubrir el total?": {
+            dictamen: ["Promesa de pago", "Negativa de pago"],
+            keywords: ["pago parcial", "negociar pago parcial", "abono mínimo", "pago incompleto", "no puedo cubrir total", "plan de pagos flexibles", "oferta de pago parcial"],
+            summary: "Un pago parcial es mejor que ningún pago. Negocia un monto realista que el cliente pueda cubrir inmediatamente. Explica que esto demuestra buena voluntad, evita un mayor escalamiento del caso y mantiene su compromiso. Registra la fecha y monto del pago parcial y el nuevo acuerdo para el saldo restante.",
+            objetivoClave: "Obtener cualquier pago para mantener la cuenta activa y evitar un rompimiento total.",
+            detail: {
+                strategy: "La clave es la flexibilidad, pero con un objetivo claro: un pago ahora. Luego, reestructuras el resto. Es un paso a paso. No aceptes promesas vagas de 'más tarde'.",
+                phrases: "'Comprendo que el monto total es alto. ¿Qué cantidad podría abonar hoy mismo para demostrar su interés y evitar un recargo mayor? Con eso, podemos establecer un nuevo plan para el resto.'"
+            }
+        },
+        "¿Qué hacer si el cliente se esconde o evita las visitas?": {
+            dictamen: ["Sin contacto", "Cambio de domicilio"],
+            keywords: ["esconde", "evita visitas", "no sale de casa", "no abre la puerta", "se oculta", "ilocalizable en domicilio", "cliente evasivo", "guardia", "cazar", "esperar"],
+            summary: "Si el cliente se esconde, estás frente a una evasión activa. Intensifica las visitas en diferentes horarios (mañana, tarde, noche, fines de semana). Realiza un sondeo ampliado con vecinos, negocios cercanos o el portero. Deja notificaciones de visita visibles pero discretas. El objetivo es que sienta tu presencia y la urgencia.",
+            objetivoClave: "Romper el patrón de evasión a través de una presencia persistente e inteligente en campo.",
+            detail: {
+                strategy: "La persistencia es clave. Si sabe que estás ahí, eventualmente tendrá que confrontar la situación. No te limites a un solo horario. La información de los vecinos es oro.",
+                phrases: "'He realizado varias visitas en diferentes horarios. Es importante que hablemos sobre su crédito. Dejaré esta notificación para que me contacte urgentemente.'"
+            }
+        },
+        "¿Cómo detectar un comprobante de pago falso?": {
+            dictamen: ["Promesa de pago", "Negativa de pago", "Prestanombre"],
+            keywords: ["comprobante falso", "detectar mentiras", "engaño de pago", "pago fraudulento", "verificar comprobante", "screenshot falso", "transferencia falsa"],
+            summary: "Los comprobantes falsos a menudo tienen errores tipográficos, formatos inconsistentes, fechas manipuladas o no incluyen la clave de rastreo (SPEI) o número de operación. Siempre verifica la autenticidad contactando al banco o esperando la confirmación en sistema. Si dudas, insiste en la validación antes de dar por buena la promesa.",
+            objetivoClave: "Evitar fraudes y asegurar que todos los pagos sean genuinos y se reflejen en el sistema.",
+            detail: {
+                strategy: "Tu ojo crítico es tu mejor herramienta. Desconfía de los comprobantes que llegan 'demasiado fácil' o que no tienen todos los detalles. Un deudor honesto no tiene problemas en proveer la información para que verifiques.",
+                phrases: "'Gracias por enviarlo. Para completar el registro, necesito la clave de rastreo o el número de operación para validarlo en sistema. En cuanto se refleje, su cuenta estará al día.'"
+            }
+        },
+        "¿Qué hago si el cliente ya vendió la moto a un tercero?": {
+            dictamen: ["Negativa de pago", "Prestanombre", "Jurídico"],
+            keywords: ["vendió la moto", "traspasó la moto", "venta ilegal", "robo de moto", "fraude con la moto", "moto a tercero", "sin liquidar crédito"],
+            summary: "¡Alerta máxima de fraude! Si el cliente vendió la moto sin liquidar el crédito, es un incumplimiento grave y potencialmente un delito. Debes documentar esta información con el máximo detalle (a quién la vendió, cuándo, por cuánto) y escalar el caso de inmediato al área legal y de fraude. La prioridad es la recuperación del activo y la acción legal contra el titular del crédito.",
+            objetivoClave: "Documentar el fraude, escalar a legal/fraudes y buscar la recuperación del activo o la acción legal.",
+            detail: {
+                strategy: "No intentes recuperar la moto por tu cuenta de un tercero. Eso es ilegal. Tu rol es recopilar información y documentar el delito. El área legal se encargará de las acciones judiciales para recuperar el activo o proceder contra el deudor.",
+                phrases: "'Sr. [Apellido], vender una moto con un crédito activo es una falta grave a su contrato y tiene implicaciones legales. Necesito toda la información posible sobre a quién se la vendió para documentar este caso de fraude.'"
+            }
+        },
+        "¿Cómo manejar la excusa de 'estoy fuera de la ciudad'?": {
+            dictamen: ["Sin contacto", "Negativa de pago", "Promesa de pago"],
+            keywords: ["fuera de la ciudad", "viaje", "ausente", "lejos", "no estoy", "volar", "vacaciones", "de viaje", "no puedo ir"],
+            summary: "Si el cliente alega estar fuera, valida la situación pero redirige a soluciones de pago remoto. Explica que, aunque esté ausente, la deuda sigue generando intereses y se puede realizar un pago a distancia. Ofrece opciones de transferencia, pago en línea o indicarle a un tercero de confianza que realice el pago por él.",
+            objetivoClave: "Facilitar un pago remoto para evitar el aumento de la mora y mantener el compromiso, a pesar de la ausencia del cliente.",
+            detail: {
+                strategy: "Esta es una excusa común para ganar tiempo. Tu objetivo es eliminar esa excusa. La tecnología permite pagar desde casi cualquier lugar. No dejes que la distancia sea un impedimento.",
+                phrases: "'Entiendo que esté de viaje. Sin embargo, puede realizar su pago por transferencia o a través de nuestra plataforma en línea. ¿Necesita ayuda con los datos para hacerlo ahora mismo?'"
+            }
+        },
+        "¿Qué hago si el cliente me ofrece solo 'propina' o un pago irrisorio?": {
+            dictamen: ["Negativa de pago", "Promesa de pago"],
+            keywords: ["propina", "pago irrisorio", "pago muy poco", "abono mínimo", "oferta de pago baja", "pago simbólico"],
+            summary: "Agradece la buena voluntad del cliente, pero explica que el monto ofrecido no es suficiente para impactar el crédito de manera significativa. Redirige a la negociación de un pago parcial que realmente abone a la deuda y muestre un compromiso serio. El objetivo es obtener un pago relevante, no una 'limosna'.",
+            objetivoClave: "Negociar un pago parcial significativo que demuestre compromiso real y reduzca la deuda.",
+            detail: {
+                strategy: "No aceptes pagos que no sirvan para nada. Un pago irrisorio es una forma de engaño o de ganar tiempo. Sé firme pero educado en tu rechazo y en tu redirección a un monto más apropiado.",
+                phrases: "'Agradezco su intención, pero ese monto no es suficiente para detener el proceso de mora. ¿Podría abonar al menos [Monto Mínimo Razonable] para que podamos reestructurar su crédito de forma efectiva?'"
+            }
+        },
+        "¿Cómo cerrar la gestión con un cliente difícil?": {
+            dictamen: ["Promesa de pago", "Negativa de pago", "Sin contacto"],
+            keywords: ["cerrar gestión", "finalizar gestión", "cliente difícil", "último paso", "concluir caso", "cierre de cobranza", "documentar resultado"],
+            summary: "Cerrar una gestión con un cliente difícil implica haber agotado todas las estrategias y haber llegado a una de tres conclusiones: pago, promesa de pago con acuerdo formal, o escalada del caso. Siempre documenta el resultado y los próximos pasos. No hay 'final feliz' en todos los casos, pero sí un 'final de gestión'.",
+            objetivoClave: "Llevar la gestión a una conclusión definida y documentada, ya sea pago o escalada.",
+            detail: {
+                strategy: "El cierre no siempre es un cobro. A veces es la decisión de escalar. La clave es no dejar el caso en el limbo. Ten un paso final definido.",
+                phrases: "'Hemos explorado todas las opciones. Para el día de hoy, ¿lograremos el pago o debemos documentar la escalada del caso al siguiente nivel?'"
+            }
+        },
+        "¿Qué hago si el cliente es un familiar o conocido?": { // Removed duplicate entry to fix error.
+            dictamen: ["Contacto con tercero", "Promesa de pago", "Negativa de pago"],
+            keywords: ["familiar", "conocido", "amigo", "personal", "confianza", "conflicto de interés", "pariente", "relación personal", "gestionar amigo"],
+            summary: "Mantén el profesionalismo. Trata el caso como cualquier otro, aplicando las políticas de la empresa sin excepciones. Si la relación personal interfiere en tu gestión, solicita a tu supervisor que reasigne la cuenta para evitar conflictos de interés y proteger tu relación personal.",
+            objetivoClave: "Gestionar la deuda de forma profesional e imparcial, o escalar para evitar conflictos de interés.",
+            detail: {
+                strategy: "Las relaciones personales y el trabajo no se deben mezclar. Si sientes que afecta tu objetividad, es mejor que otro gestor se encargue. Tu integridad profesional es lo primero.",
+                phrases: "'Entiendo la situación. Sin embargo, mi rol profesional me obliga a seguir el protocolo. Si esto genera un conflicto, puedo hablar con mi supervisor para ver la posibilidad de que otro gestor lleve el caso.'"
+            }
+        },
+        "¿Cómo prevenir futuras moras con el cliente?": {
+            dictamen: ["Promesa de pago"],
+            keywords: ["prevenir moras futuras", "educar cliente", "evitar retrasos", "recordatorios de pago", "educación financiera", "mantener al corriente"],
+            summary: "Una vez que el cliente paga o hace una promesa, enfócate en la prevención. Recuérdale las fechas de pago, los métodos disponibles y los beneficios de mantener un buen historial. Ofrece programar recordatorios. La educación financiera es clave para que no vuelva a caer en mora.",
+            objetivoClave: "Empoderar al cliente con información y herramientas para mantener su crédito al corriente.",
+            detail: {
+                strategy: "La prevención es la mejor cobranza. Un cliente educado es un cliente más responsable. Usa el momento del pago para reforzar hábitos positivos.",
+                phrases: "'Para evitar futuras moras, le recomiendo [método de pago preferido] y puedo enviarle un recordatorio unos días antes de su fecha de corte. ¿Le parece bien?'"
+            }
+        },
+        "¿Qué hacer si el cliente se niega a dar información personal?": {
+            dictamen: ["Sin contacto", "Negativa de pago"],
+            keywords: ["información personal", "niega datos", "privacidad", "no quiere dar información", "actualizar expediente", "datos de contacto", "referencias"],
+            summary: "Si el cliente se niega a dar información personal (ej. referencias, nuevo número), explica que es crucial para la actualización de su expediente y para su propio beneficio (poder contactarlo para ofertas, etc.). Si persiste, informa que la empresa usará la información existente y podría escalar el caso si la comunicación se rompe.",
+            objetivoClave: "Obtener información necesaria para la gestión y para mantener una comunicación efectiva.",
+            detail: {
+                strategy: "La información es poder. Si el cliente la retiene, es un obstáculo. Sé persuasivo sobre los beneficios para él, o las consecuencias para él si no la provee.",
+                phrases: "'Entiendo su preocupación por la privacidad, pero para poder darle el mejor seguimiento y evitar que este crédito se complique, necesito actualizar sus datos. ¿Qué información me puede proporcionar para ayudarle?'"
+            }
+        },
+        "¿Cómo responder a un 'llámame después' o 'no tengo tiempo'?": {
+            dictamen: ["Promesa de pago", "Sin contacto", "Negativa de pago"],
+            keywords: ["llámame después", "no tengo tiempo", "ocupado", "prisa", "más tarde", "agendar llamada", "cliente evasivo"],
+            summary: "Acepta el 'no tengo tiempo' pero inmediatamente intenta agendar una fecha y hora específicas para la próxima comunicación. 'Entiendo, ¿cuándo sería un buen momento para llamarle de nuevo hoy/mañana?' Si se niega a agendar, haz un breve resumen de la urgencia del pago. Documenta el intento y el resultado.",
+            objetivoClave: "Convertir un rechazo de tiempo en un compromiso de futura comunicación o, al menos, dejar clara la urgencia.",
+            detail: {
+                strategy: "No te conformes con un 'después'. Siempre busca una cita. Si no, al menos siembra la semilla de la urgencia. No dejes que el cliente controle completamente el cuándo.",
+                phrases: "'Entiendo que está ocupado. Solo necesito 2 minutos para informarle algo crucial sobre su crédito. Si no puede ahora, ¿podríamos agendar una llamada breve a las [hora]?'"
+            }
+        }
+  }
+};
+export const leadKnowledgeBase: KnowledgeBase = {
+  initial: "Soy Falcon, tu asistente de liderazgo. Selecciona un pilar o genera un plan de acción para tu equipo.",
+  fallback: { summary: "No tengo un análisis para esa consulta. Por favor, selecciona un tópico o utiliza el botón 'Generar Plan de Acción'.", detail: undefined },
+  faqs: {
+      "¿Cómo hacer un coaching efectivo en campo (Modelo de 5 Pasos)?": {
+          keywords: ["coaching", "coaching en campo", "modelo 5 pasos", "conecta", "acompaña", "modela", "potencia", "observa", "seguimiento", "terreno", "entrenamiento", "desarrollo de gestores", "mentoría", "retroalimentación en campo"],
+          summary: "Para un coaching efectivo, sigue este 'Modelo de 5 Pasos para Coaching en Campo': 1. Conecta con el gestor definiendo un objetivo claro. 2. Acompaña en campo observando activamente. 3. Modela usando preguntas clave en lugar de dar órdenes. 4. Potencia sus fortalezas para construir confianza. 5. Observa el avance y da seguimiento continuo.",
+          detail: {
+              strategy: "Este modelo es un ciclo continuo, no un evento único. La clave está en la preparación antes de salir a campo (Conecta) y en el seguimiento posterior (Observa), que es donde se consolida el aprendizaje.",
+              phrases: "<b>Preguntas para 'Conectar':</b> '¿Qué habilidad específica te gustaría mejorar en las visitas de hoy?'<br><b>Preguntas para 'Modelar':</b> '¿Qué crees que funcionó bien en esa interacción?', 'Si pudieras repetirla, ¿qué harías diferente?', '¿Qué opción crees que no exploraste?'<br><b>Feedback para 'Potenciar':</b> 'La forma en que manejaste esa objeción fue excelente, sigue usando esa técnica.'"
+          }
+      },
+      "¿Cómo dar feedback correctivo (Técnica del Sándwich)?": {
+          keywords: ["feedback", "retroalimentación", "técnica del sándwich", "feedback correctivo", "crítica constructiva", "mejora de desempeño", "moral del equipo", "mensajes positivos", "gestión de errores", "desarrollo personal"],
+          summary: "Para entregar retroalimentación sobre áreas de mejora sin minar la moral, utiliza la Técnica del Sándwich. Comienza con un mensaje positivo inicial reconociendo un logro. Después, presenta la corrección de forma específica y ofrece apoyo. Cierra con un mensaje de confianza final que empodere al gestor.",
+          detail: {
+              strategy: "El objetivo no es suavizar el mensaje, sino crear un estado mental receptivo en el colaborador. La crítica debe ser sobre un comportamiento observable y medible, no sobre la personalidad. Siempre enfoca la conversación hacia el futuro y la solución.",
+              phrases: "<b>1. Mensaje Positivo Inicial (Pan):</b> 'He notado que has mejorado mucho tu tasa de contacto, ¡buen trabajo ahí!'<br><b>2. Corrección Específica (Relleno):</b> 'En la última visita, observé que cuando el cliente dijo [objeción], pasamos directamente a la siguiente opción sin indagar más. Hablemos de cómo podemos explorar esa primera negativa.'<br><b>3. Mensaje de Confianza Final (Pan):</b> 'Confío en que si ajustamos esa parte, tus cierres de convenio mejorarán drásticamente. Cuentas con mi apoyo.'"
+          }
+      },
+       "¿Cómo motivar a un equipo con bajo rendimiento?": {
+          keywords: ["motivar", "equipo desmotivado", "bajo rendimiento", "incentivos no económicos", "reconocimiento", "desarrollo", "equipo", "aumentar productividad", "combatir desmotivación", "liderazgo motivacional", "clima laboral"],
+          summary: "La motivación sostenible se logra con incentivos no económicos. Ofrece flexibilidad para un mejor equilibrio vida-trabajo, lo que aumenta la lealtad. Implementa un reconocimiento continuo, celebrando logros específicos públicamente. Fomenta el desarrollo continuo con capacitaciones, demostrando que inviertes en su crecimiento.",
+          detail: {
+              strategy: "Un bajo rendimiento generalizado suele ser un síntoma de problemas sistémicos, no solo de falta de habilidad individual. Investiga las causas raíz: ¿las metas son realistas? ¿las herramientas son adecuadas? ¿hay agotamiento? La motivación viene de sentir propósito, autonomía y maestría.",
+              phrases: "<b>Para Reconocimiento:</b> 'Equipo, quiero reconocer a [Nombre] por haber logrado un convenio en la cuenta [X], que todos sabíamos que era muy difícil. ¡Excelente trabajo de persistencia!'<br><b>Para Fomentar Desarrollo:</b> 'He notado que varios han tenido problemas con [objeción Y]. La próxima semana tendremos una sesión de 30 minutos para entrenar específicamente en cómo manejarla.'"
+          }
+      },
+      "¿Qué hacer si sospecho de malas prácticas?": {
+          keywords: ["fraude", "gestor deshonesto", "mentiras en reportes", "quejas éticas", "auditoría interna", "control de malas prácticas", "sospecha de corrupción", "alerta de fraude", "patrones irregulares", "conducta inapropiada"],
+          summary: "Actúa con base en evidencia documentada, no en percepciones. Debes estar atento a las señales de alerta: patrones de quejas éticas, inconsistencias en el flujo operacional o discrepancias en la documentación. Si las sospechas persisten, colabora con Auditoría Interna y refuerza los protocolos de control para todo el equipo.",
+          detail: {
+              strategy: "Tu rol es de supervisor y guardián del proceso, no de investigador. Documenta los hechos de manera objetiva y sin juicios de valor. Escala tus observaciones a los canales correctos (RRHH, Auditoría). Comunica cualquier cambio en los controles al equipo como una 'mejor de proceso', no como una medida punitiva.",
+              phrases: undefined
+          }
+      },
+      "Gestión del tiempo y priorización": {
+          keywords: ["tiempo", "priorización", "productividad", "enfocar", "urgente", "importante", "matriz de eisenhower", "administración del tiempo", "optimizar recursos", "eficiencia laboral", "manejo de tareas"],
+          summary: "Enseña a tu equipo a usar la Matriz de Eisenhower para diferenciar lo Urgente de lo Importante. Lo 'Urgente e Importante' se hace ahora (ej: visitar cuenta sin gestión). Lo 'Importante pero No Urgente' se planifica (ej: preparar la ruta de mañana). Lo 'Urgente pero No Importante' se delega si es posible. Lo 'Ni Urgente Ni Importante' se elimina.",
+          objetivoClave: "INCREMENTAR la efectividad del equipo enfocando su energía en tareas de alto impacto.",
+          detail: {
+              strategy: "La mayoría de los gestores viven en el cuadrante de lo 'Urgente', apagando incendios. Tu rol como líder es moverlos hacia el cuadrante de lo 'Importante pero No Urgente', que es donde reside la planificación y la prevención. Una reunión semanal de 15 minutos para planificar la ruta puede ser más valiosa que horas de gestión reactiva.",
+              phrases: "<b>Pregunta de Coaching:</b> 'Viendo tu lista de cuentas para hoy, ¿cuáles son las 3 que, si las gestionas con éxito, tendrán el mayor impacto en tu resultado? Empecemos por esas.'"
+          }
+      },
+      "Cómo manejar a un gestor 'estrella' (y evitar que se 'queme')": {
+          keywords: ["estrella", "mejor gestor", "alto rendimiento", "quemado", "desgaste", "agotamiento", "retener talento", "motivar", "sobrecarga laboral", "desarrollo profesional", "evitar burnout", "gestión de alto potencial"],
+          summary: "Tu gestor 'estrella' es tu elemento más valioso, pero también es vulnerable a 'quemarse' por el exceso de presión. No lo sobrecargues con las cuentas más difíciles. En su lugar, involúcrale en proyectos especiales (ej: que sea mentor de un novato, que pruebe una nueva táctica). El reconocimiento debe ser sobre su impacto y no solo sobre su cantidad de trabajo. Pregúntale sobre sus metas para mantenerlo comprometido.",
+          objetivoClave: "RETENER y DESARROLLAR a tu mejor talento, evitando que se agote o se desmotive por el exceso de trabajo.",
+          detail: {
+              strategy: "El error más común es recompensar el buen rendimiento con más trabajo. La verdadera recompensa es más responsabilidad y visibilidad. Involucra a tu gestor estrella en la solución de problemas a nivel de equipo. Esto no solo lo mantiene motivado, sino que eleva el nivel de todos los demás.",
+              phrases: "<b>Conversación de Desarrollo:</b> 'Tu desempeño ha sido excepcional. Más allá de las metas actuales, ¿qué te gustaría lograr aquí a largo plazo? Pensemos juntos en cómo podemos darte más retos que te acerquen a eso.'"
+          }
+      },
+      "feedback-atiende": { summary: "¡Excelente! Un gestor que atiende indicaciones es la base para un un coaching exitoso. Tu rol es ser un 'Potenciador'. Refuerza positivamente cada vez que aplique correctamente una nueva técnica. Esto acelerará su desarrollo y construirá una relación de confianza sólida.", objetivoClave: "ACELERAR el aprendizaje a través del refuerzo positivo y la asignación de retos incrementales." },
+      "feedback-iniciativa": { summary: "¡Fantástico! La iniciativa es un rasgo de alto potencial. Con este gestor, tu rol es ser un 'Mentor'. En lugar de darle el 'qué', enfócate en el 'por qué'. Dale más autonomía y empieza a delegarle la resolución de problemas más complejos para fomentar su pensamiento estratégico.", objetivoClave: "TRANSFORMAR la iniciativa en pensamiento estratégico y autonomía." },
+      "feedback-desmotivado": { summary: "Atención aquí. La desmotivación es un bloqueador de rendimiento. Tu primer paso es diagnosticar la causa raíz en una conversación 1-a-1. ¿Es personal? ¿Son las herramientas? ¿Es agotamiento? Aplica la estrategia de 'Motivar a un equipo con bajo rendimiento' pero a nivel individual. Reconoce sus pequeños logros para reconstruir su confianza.", objetivoClave: "RECONECTAR al gestor con su propósito y autoconfianza a través del diagnóstico y el reconocimiento." },
+      "feedback-conflictivo": { summary: "Esta es una una alerta crítica. Un gestor conflictivo puede afectar a todo el equipo. Tu rol es ser un 'Líder Firme'. Debes abordar el comportamiento de inmediato, usando la 'Técnica del Sándwich' para un feedback correctivo. Sé específico sobre el comportamiento inaceptable y establece consecuencias claras si no hay un cambio. Documenta cada interacción.", objetivoClave: "CORREGIR el comportamiento disruptivo estableciendo límites claros y documentando los hechos." }
+  }
+};

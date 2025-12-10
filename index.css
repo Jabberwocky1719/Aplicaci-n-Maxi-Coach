@@ -1,0 +1,1091 @@
+
+:root {
+  /* THEME: Básico (Default) */
+  --primary-color: #1a3a5f;
+  --primary-light: #2c5aa0;
+  --app-bg: #ffffff;
+  --content-bg: #f3f4f6;
+  --text-primary: #1f2937;
+  --text-secondary: #6b7280;
+  --text-inverted: #ffffff;
+  --border-color: #e5e7eb;
+  --bubble-user-bg: #2c5aa0;
+  --bubble-user-text: #ffffff;
+  --bubble-assistant-bg: #ffffff;
+  --bubble-assistant-text: #1f2937;
+  --card-bg: #ffffff;
+  --button-primary-bg: #1a3a5f;
+  --button-primary-text: #ffffff;
+  --button-secondary-bg: #e5e7eb;
+  --button-secondary-text: #1f2937;
+  --modal-overlay-bg: rgba(17, 24, 39, 0.6);
+
+  /* ACCENT COLORS (Unchanged by themes) */
+  --accent-green: #4caf50;
+  --accent-red: #f44336;
+  --accent-orange: #ff9800;
+  --accent-yellow: #ffc107;
+  --white: #ffffff; /* for performance badges */
+
+  /* Heuristic heights for calculations */
+  --header-height: 60px; /* Approximate header height */
+  --input-height: 90px;  /* Approximate chat input height */
+}
+
+body[data-theme="oscuro"] {
+  --primary-color: #2c5aa0;
+  --primary-light: #4e8dff;
+  --app-bg: #111827;
+  --content-bg: #000000;
+  --text-primary: #e5e7eb;
+  --text-secondary: #9ca3af;
+  --text-inverted: #ffffff;
+  --border-color: #374151;
+  --bubble-user-bg: #2c5aa0;
+  --bubble-user-text: #ffffff;
+  --bubble-assistant-bg: #1f2937;
+  --bubble-assistant-text: #e5e7eb;
+  --card-bg: #1f2937;
+  --button-primary-bg: #2c5aa0;
+  --button-primary-text: #ffffff;
+  --button-secondary-bg: #374151;
+  --button-secondary-text: #e5e7eb;
+}
+
+body[data-theme="whatsapp"] {
+  --primary-color: #075E54;
+  --primary-light: #128C7E;
+  --app-bg: #ECE5DD;
+  --content-bg: #ECE5DD;
+  --text-primary: #000000;
+  --text-secondary: #667781;
+  --text-inverted: #ffffff;
+  --border-color: #D1D7DB;
+  --bubble-user-bg: #DCF8C6;
+  --bubble-user-text: #000000;
+  --bubble-assistant-bg: #ffffff;
+  --bubble-assistant-text: #000000;
+  --card-bg: #ffffff;
+  --button-primary-bg: #25D366;
+  --button-primary-text: #ffffff;
+  --button-secondary-bg: #E9EDEF;
+  --button-secondary-text: #000000;
+}
+
+body[data-theme="vampiro"] {
+  --primary-color: #8B0000;
+  --primary-light: #B22222;
+  --app-bg: #121212;
+  --content-bg: #000000;
+  --text-primary: #D3D3D3;
+  --text-secondary: #A9A9A9;
+  --text-inverted: #ffffff;
+  --border-color: #444444;
+  --bubble-user-bg: #8B0000;
+  --bubble-user-text: #D3D3D3;
+  --bubble-assistant-bg: #2C2C2C;
+  --bubble-assistant-text: #D3D3D3;
+  --card-bg: #1E1E1E;
+  --button-primary-bg: #8B0000;
+  --button-primary-text: #D3D3D3;
+  --button-secondary-bg: #444444;
+  --button-secondary-text: #D3D3D3;
+}
+
+body[data-theme="amanecer"] {
+  --primary-color: #D97706;
+  --primary-light: #F59E0B;
+  --app-bg: #FEF3C7;
+  --content-bg: #FFFBEB;
+  --text-primary: #422006;
+  --text-secondary: #78350F;
+  --text-inverted: #ffffff;
+  --border-color: #FDE68A;
+  --bubble-user-bg: #F59E0B;
+  --bubble-user-text: #ffffff;
+  --bubble-assistant-bg: #ffffff;
+  --bubble-assistant-text: #422006;
+  --card-bg: #ffffff;
+  --button-primary-bg: #D97706;
+  --button-primary-text: #ffffff;
+  --button-secondary-bg: #FEF3C7;
+  --button-secondary-text: #422006;
+}
+
+body[data-theme="corporativo"] {
+  --primary-color: #047857;
+  --primary-light: #059669;
+  --app-bg: #F0FDF4;
+  --content-bg: #D1FAE5;
+  --text-primary: #1f2937;
+  --text-secondary: #4b5563;
+  --text-inverted: #ffffff;
+  --border-color: #A7F3D0;
+  --bubble-user-bg: #059669;
+  --bubble-user-text: #ffffff;
+  --bubble-assistant-bg: #ffffff;
+  --bubble-assistant-text: #1f2937;
+  --card-bg: #ffffff;
+  --button-primary-bg: #047857;
+  --button-primary-text: #ffffff;
+  --button-secondary-bg: #E2E8F0;
+  --button-secondary-text: #1f2937;
+}
+
+/* Basic Reset & Mobile First Setup */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100vh; /* CRÍTICO: Asegura que #root tome exactamente el 100% de la altura del viewport */
+  overflow: hidden; /* CRÍTICO: Asegura que el scroll a nivel de página esté desactivado */
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--content-bg);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-size: 0.65rem; /* Ajuste global final */
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* CRÍTICO: Asegura que #root tome exactamente el 100% de la altura del viewport */
+}
+
+/* --- App Container & Header --- */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  background-color: var(--app-bg);
+  color: var(--text-primary);
+  font-size: 0.65rem; /* Base font size for the app */
+  max-width: 900px; /* Limita el ancho máximo en pantallas grandes */
+  margin: 0 auto; /* Centra el contenedor */
+  height: 100%; /* CRÍTICO: Asegura que el app-container tome toda la altura disponible de #root */
+  /* REMOVIDO: overflow: hidden; de app-container para permitir scroll del chat-window */
+  gap: 0.8rem; /* Espacio entre header, top-panel-wrapper, chat-window, chat-input-form */
+}
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 1rem;
+  background-color: var(--primary-color);
+  color: var(--text-inverted);
+  height: var(--header-height);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky; /* Sticky header */
+  top: 0;
+  z-index: 1000;
+  flex-shrink: 0; /* CRÍTICO: Asegura que el header no se encoja */
+}
+
+.app-header .header-left,
+.app-header .header-right {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.app-header .app-title {
+  font-size: 0.95rem; /* Ajuste */
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.app-header .app-title i {
+  font-size: 0.9rem; /* Ajuste */
+}
+
+.app-header button {
+  background: none;
+  border: none;
+  color: var(--text-inverted);
+  cursor: pointer;
+  font-size: 0.8rem; /* Ajuste */
+  padding: 0.4rem 0.6rem;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.app-header button:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.app-header button.icon-only {
+  padding: 0.4rem;
+}
+
+/* Theme selector dropdown */
+.theme-selector-container {
+  position: relative;
+  display: inline-block;
+}
+
+.theme-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  min-width: 120px;
+  z-index: 1100;
+  display: flex;
+  flex-direction: column;
+  padding: 0.4rem 0;
+  margin-top: 0.5rem;
+}
+
+.theme-dropdown-item {
+  background: none;
+  border: none;
+  color: var(--text-primary);
+  padding: 0.6rem 0.8rem;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  font-size: 0.7rem; /* Ajuste */
+}
+
+.theme-dropdown-item:hover {
+  background-color: var(--content-bg);
+}
+
+.theme-dropdown-item.active {
+  background-color: var(--primary-light);
+  color: var(--text-inverted);
+  font-weight: 500;
+}
+
+
+/* --- Main Content Layout --- */
+/* .app-main class has been removed from App.tsx, so these styles are no longer applicable */
+
+
+.top-panel-wrapper {
+  display: grid;
+  grid-template-columns: 2fr 3fr; /* 2/5 for info, 3/5 for FAQ */
+  gap: 0.8rem;
+  height: 200px; /* Altura fija para la sección superior */
+  padding: 0 0.5rem; /* Padding horizontal para el wrapper de los paneles */
+  flex-shrink: 0; /* CRÍTICO: Asegura que los paneles superiores no se encoja */
+}
+
+.top-panel-wrapper.lead-view-layout {
+  grid-template-columns: 1fr; /* FAQ takes full width in lead view, not affected by the change for agent view */
+}
+
+/* --- Card Base Styles --- */
+.card {
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  padding: 1rem;
+  border: 1px solid var(--border-color);
+  overflow: hidden; /* Prevents content overflow from card boundary */
+  display: flex;
+  flex-direction: column;
+  font-size: 0.65rem; /* Ajuste */
+}
+
+.card h3 {
+  font-size: 0.75rem; /* Ajuste */
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+/* --- Credit Info Card (Left Panel - Agent View) --- */
+.credit-info-card {
+  flex-grow: 1;
+  overflow-y: auto; /* Permite scroll interno si el contenido es mucho */
+  min-height: 0; /* Necesario para que overflow-y funcione en flex items */
+}
+
+.credit-info-card .input-group {
+  margin-bottom: 0.4rem; /* Ajustado */
+  text-align: left;
+}
+
+.credit-info-card .input-group label {
+  display: block;
+  font-size: 0.6rem; /* Ajuste */
+  color: var(--text-secondary);
+  margin-bottom: 0.2rem;
+}
+
+.credit-info-card .input-group select {
+  width: 100%;
+  padding: 0.4rem 0.75rem; /* Ajustado */
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  background-color: var(--content-bg);
+  color: var(--text-primary);
+  font-size: 0.6rem; /* Ajuste */
+  appearance: none; /* Eliminar estilo nativo del select */
+  background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%236b7280%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13.6-6.4H19.5c-5%200-9.4%201.7-12.9%205.1-3.6%203.5-5.4%207.9-5.4%2013s1.7%209.4%205.4%2012.9l128.5%20128.5c3.5%203.5%207.9%205.4%2012.9%205.4s9.4-1.7%2012.9-5.4L287%2095.1c3.6-3.5%205.4-7.9%205.4-13S290.6%2072.9%20287%2069.4z%22%2F%3E%3C%2Fsvg%3E');
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 0.6rem auto;
+}
+
+.credit-info-card .input-group select:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(var(--primary-color-rgb), 0.2);
+}
+
+
+/* --- FAQ Card (Right Panel - Agent/Lead View) --- */
+.faq-card {
+  flex-grow: 1;
+  overflow-y: auto; /* Permite scroll interno si el contenido es mucho */
+  min-height: 0; /* Necesario para que overflow-y funcione en flex items */
+}
+
+.faq-card .faq-search-input {
+  width: 100%;
+  padding: 0.4rem 0.75rem; /* Ajustado */
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  background-color: var(--content-bg);
+  color: var(--text-primary);
+  font-size: 0.6rem; /* Ajuste */
+  margin-bottom: 0.6rem; /* Espacio debajo del buscador */
+}
+
+.faq-card .faq-list {
+  flex-grow: 1;
+  overflow-y: auto;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem; /* Espacio entre items de FAQ */
+  padding-right: 0.2rem; /* Espacio para el scrollbar */
+}
+
+.faq-card .faq-item {
+  display: block;
+  width: 100%;
+  padding: 0.6rem 0.8rem; /* Ajustado */
+  background-color: var(--content-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  color: var(--text-primary);
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+  font-size: 0.65rem; /* Ajuste */
+  position: relative;
+  overflow-wrap: break-word; /* Asegura que el texto se ajuste */
+  word-wrap: break-word; /* Fallback */
+}
+
+.faq-card .faq-item:hover {
+  background-color: var(--border-color);
+  border-color: var(--primary-light);
+}
+
+.faq-card .faq-item .faq-dictamen-tag {
+  display: block;
+  font-size: 0.55rem; /* Ajuste */
+  color: var(--text-secondary);
+  margin-top: 0.2rem;
+}
+
+.faq-card .no-faqs-message {
+  color: var(--text-secondary);
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.65rem; /* Ajuste */
+}
+
+/* --- Chat Window --- */
+.chat-window {
+  flex-grow: 1;
+  overflow-y: auto; /* CRÍTICO: Permite el scroll solo en la ventana de chat */
+  padding: 0.8rem 0.8rem; /* Padding horizontal para el chat window */
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  -webkit-overflow-scrolling: touch; /* Mejora el scroll en iOS */
+  scroll-behavior: smooth;
+  min-height: 0; /* Necesario para flex-grow: 1 con overflow-y: auto */
+  background-color: var(--content-bg);
+}
+
+
+/* --- Message Bubble --- */
+.message-bubble {
+  display: flex;
+  flex-direction: column;
+  max-width: 80%;
+}
+
+.message-bubble.user {
+  align-self: flex-end;
+  background-color: var(--bubble-user-bg);
+  color: var(--bubble-user-text);
+  border-radius: 12px 12px 2px 12px;
+}
+
+.message-bubble.assistant {
+  align-self: flex-start;
+  background-color: var(--bubble-assistant-bg);
+  color: var(--bubble-assistant-text);
+  border-radius: 12px 12px 12px 2px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+}
+
+.message-bubble .message-content {
+  padding: 0.6rem 0.8rem; /* Ajustado */
+  font-size: 0.7rem; /* Ajustado */
+  line-height: 1.3;
+  word-wrap: break-word; /* Asegura que el texto se ajuste */
+  overflow-wrap: break-word; /* Asegura que el texto se ajuste */
+}
+
+.message-bubble.typing {
+  min-width: 80px; /* Ancho mínimo para el indicador de typing */
+  align-items: center;
+  padding: 0.6rem 0.8rem;
+}
+
+.typing-indicator span {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background-color: var(--text-secondary);
+  border-radius: 50%;
+  margin: 0 2px;
+  animation: bounce 1s infinite ease-in-out;
+}
+
+.typing-indicator span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.typing-indicator span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+.message-bubble-footer {
+  display: flex;
+  justify-content: flex-end; /* Align to the right for both user and assistant */
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.2rem 0.8rem 0.4rem 0.8rem; /* Bottom padding for the bubble */
+  font-size: 0.55rem; /* Ajustado */
+  color: var(--text-secondary);
+}
+
+.message-bubble.assistant .message-bubble-footer {
+  justify-content: flex-start; /* Align assistant timestamp/audio to the left */
+}
+
+.message-timestamp {
+  white-space: nowrap;
+  font-size: 0.5rem; /* Ajustado */
+  color: var(--text-secondary);
+}
+
+.audio-play-btn {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  font-size: 0.7rem; /* Ajustado */
+  padding: 0.2rem;
+  transition: color 0.2s ease;
+}
+
+.audio-play-btn:hover {
+  color: var(--primary-light);
+}
+
+/* Specific styling for assistant messages with strategy details */
+.message-bubble.assistant .summary-section {
+  font-weight: 500;
+  margin-bottom: 0.6rem; /* Ajustado */
+}
+
+.message-bubble.assistant .key-objective {
+  background-color: var(--primary-light);
+  color: var(--text-inverted);
+  padding: 0.5rem 0.8rem; /* Ajustado */
+  border-radius: 6px;
+  font-size: 0.65rem; /* Ajustado */
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.6rem;
+  border: 1px solid var(--primary-color); /* Added border to fit theme */
+}
+
+.message-bubble.assistant .key-objective i {
+  color: var(--text-inverted); /* Icon color */
+}
+
+.message-bubble.assistant .detail-section {
+  margin-top: 0.6rem; /* Ajustado */
+  border-top: 1px solid var(--border-color);
+  padding-top: 0.6rem; /* Ajustado */
+}
+
+.message-bubble.assistant .strategy-content {
+  background-color: var(--content-bg); /* Use content-bg for strategies */
+  border-radius: 6px;
+  padding: 0.6rem 0.8rem; /* Ajustado */
+  margin-bottom: 0.4rem; /* Ajustado */
+  border: 1px solid var(--border-color);
+}
+
+.message-bubble.assistant .strategy-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.message-bubble.assistant .strategy-title {
+  font-size: 0.7rem; /* Ajustado */
+  font-weight: 600;
+  color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.message-bubble.assistant .strategy-toggle {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  font-size: 0.7rem; /* Ajustado */
+  padding: 0.2rem;
+}
+
+.message-bubble.assistant .strategy-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+  padding-top: 0;
+  font-size: 0.65rem; /* Ajustado */
+  color: var(--text-primary);
+}
+
+.message-bubble.assistant .strategy-body.expanded {
+  max-height: 500px; /* Sufficient height for expansion */
+  padding-top: 0.6rem; /* Ajustado */
+}
+
+.message-bubble.assistant .strategy-body p,
+.message-bubble.assistant .strategy-body ul,
+.message-bubble.assistant .strategy-body li {
+  margin-bottom: 0.4rem;
+  line-height: 1.4;
+}
+
+.message-bubble.assistant .strategy-body ul {
+  list-style-type: disc;
+  padding-left: 1rem;
+}
+
+.message-bubble.assistant .strategy-body li {
+  margin-bottom: 0.2rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.message-bubble.assistant .strategy-body strong {
+  color: var(--primary-color);
+}
+
+.message-bubble.assistant .fallback-payload {
+  background-color: var(--content-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 0.6rem 0.8rem;
+  color: var(--text-secondary);
+  font-style: italic;
+  font-size: 0.65rem; /* Ajustado */
+}
+
+.message-bubble.assistant .fallback-detail {
+  margin-top: 0.4rem;
+  font-size: 0.6rem; /* Ajustado */
+}
+
+.message-bubble.assistant .interactive-survey-payload {
+  background-color: var(--content-bg);
+  border: 1px solid var(--primary-light);
+  border-radius: 6px;
+  padding: 0.6rem 0.8rem;
+  color: var(--text-primary);
+  font-size: 0.65rem; /* Ajustado */
+}
+
+/* --- Chat Input --- */
+.chat-input-form {
+  display: flex;
+  padding: 0.8rem;
+  background-color: var(--card-bg);
+  border-top: 1px solid var(--border-color);
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.05);
+  gap: 0.6rem;
+  height: var(--input-height);
+  align-items: flex-start; /* Alinea al inicio si hay varias líneas de texto */
+  flex-shrink: 0; /* CRÍTICO: Asegura que el input no se encoja */
+}
+
+.chat-input-form input[type="text"] {
+  flex-grow: 1;
+  padding: 0.6rem 0.8rem;
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  font-size: 0.7rem; /* Ajustado */
+  background-color: var(--content-bg);
+  color: var(--text-primary);
+  line-height: 1.3;
+  min-height: 38px; /* Altura mínima para una buena UX */
+}
+
+.chat-input-form input[type="text"]:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(var(--primary-color-rgb), 0.2);
+}
+
+.chat-input-form button {
+  background-color: var(--primary-color);
+  color: var(--text-inverted);
+  border: none;
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 0.8rem; /* Ajustado */
+  transition: background-color 0.2s ease;
+  flex-shrink: 0; /* Asegura que el botón no se encoja */
+}
+
+.chat-input-form button:hover:not(:disabled) {
+  background-color: var(--primary-light);
+}
+
+.chat-input-form button:disabled {
+  background-color: var(--text-secondary);
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+/* --- Modals --- */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--modal-overlay-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-content {
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 600px;
+  max-height: 90vh; /* Permite que el modal sea scrollable si el contenido es grande */
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /* Controla el overflow del propio modal */
+  font-size: 0.65rem; /* Ajuste */
+}
+
+.modal-header {
+  padding: 1rem 1.2rem;
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-header h2 {
+  font-size: 0.85rem; /* Ajuste */
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.modal-body {
+  padding: 1rem 1.2rem;
+  flex-grow: 1;
+  overflow-y: auto; /* Permite scroll dentro del cuerpo del modal */
+  line-height: 1.4;
+  color: var(--text-primary);
+}
+
+.modal-body h3 {
+  font-size: 0.75rem; /* Ajuste */
+  color: var(--primary-color);
+  margin-bottom: 0.6rem;
+  margin-top: 1rem;
+}
+
+.modal-body p,
+.modal-body ul,
+.modal-body li {
+  font-size: 0.65rem; /* Ajuste */
+  margin-bottom: 0.4rem;
+  overflow-wrap: break-word; /* Asegura que el texto se ajuste */
+  word-wrap: break-word; /* Fallback */
+}
+
+.modal-body ul {
+  list-style-type: disc;
+  padding-left: 1.2rem;
+}
+
+.modal-body li {
+  margin-bottom: 0.2rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.modal-body li i {
+  color: var(--primary-color);
+  margin-top: 0.2rem;
+  flex-shrink: 0;
+}
+
+.modal-footer {
+  padding: 0.8rem 1.2rem;
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.6rem;
+}
+
+.modal-close-btn, #generate-plan-btn-modal {
+  background-color: var(--button-primary-bg);
+  color: var(--button-primary-text);
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.7rem; /* Ajuste */
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.modal-close-btn:hover, #generate-plan-btn-modal:hover {
+  background-color: var(--primary-light);
+}
+
+.modal-footer .secondary {
+  background-color: var(--button-secondary-bg);
+  color: var(--button-secondary-text);
+}
+
+.modal-footer .secondary:hover {
+  background-color: var(--border-color);
+}
+
+/* Generate Plan Modal specific form styles */
+#generate-plan-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.8rem;
+}
+
+#generate-plan-form .form-group.span-2 {
+  grid-column: span 2;
+}
+
+#generate-plan-form .form-group label {
+  font-size: 0.6rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.2rem;
+  display: block;
+}
+
+#generate-plan-form .form-group input,
+#generate-plan-form .form-group select {
+  width: 100%;
+  padding: 0.4rem 0.75rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  background-color: var(--content-bg);
+  color: var(--text-primary);
+  font-size: 0.6rem;
+}
+
+#generate-plan-form .form-group input:focus,
+#generate-plan-form .form-group select:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(var(--primary-color-rgb), 0.2);
+}
+
+
+/* --- Login Screen --- */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--content-bg);
+  padding: 1rem;
+  flex-grow: 1; /* Asegura que ocupe todo el espacio vertical disponible */
+}
+
+.login-card {
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  border: 1px solid var(--border-color);
+}
+
+.login-card .login-title {
+  font-size: 1.2rem; /* Ajuste para login */
+  color: var(--primary-color);
+  margin-bottom: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+}
+
+.login-card .login-title i {
+  font-size: 1.1rem; /* Ajuste */
+}
+
+.login-card .login-description {
+  font-size: 0.7rem; /* Ajuste para login */
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+  line-height: 1.4;
+}
+
+.login-form .form-group {
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.login-form .form-group label {
+  display: block;
+  font-size: 0.7rem; /* Ajuste para login */
+  color: var(--text-primary);
+  margin-bottom: 0.4rem;
+  font-weight: 500;
+}
+
+.login-form .form-group input[type="text"],
+.login-form .form-group input[type="password"] {
+  width: 100%;
+  padding: 0.7rem 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 0.75rem; /* Ajuste para login */
+  background-color: var(--content-bg);
+  color: var(--text-primary);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.login-form .form-group input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(var(--primary-color-rgb), 0.2);
+}
+
+.login-card .login-error {
+  color: var(--accent-red);
+  font-size: 0.65rem; /* Ajuste para login */
+  margin-top: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.login-card .login-button {
+  width: 100%;
+  padding: 0.8rem 1.2rem;
+  background-color: var(--button-primary-bg);
+  color: var(--button-primary-text);
+  border: none;
+  border-radius: 8px;
+  font-size: 0.8rem; /* Ajuste para login */
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin-top: 1rem;
+}
+
+.login-card .login-button:hover {
+  background-color: var(--primary-light);
+}
+
+.login-card .login-button.secondary {
+  background-color: var(--button-secondary-bg);
+  color: var(--button-secondary-text);
+  margin-top: 0.6rem;
+}
+
+.login-card .login-button.secondary:hover {
+  background-color: var(--border-color);
+}
+
+/* Specific styles for password change card */
+.login-card.password-change-card .login-title {
+  font-size: 1.1rem; /* Slightly smaller for password change title */
+}
+
+/* --- Media Queries (Responsiveness) --- */
+@media (max-width: 768px) {
+  .app-header .app-title {
+    font-size: 0.8rem; /* Ajuste en móvil */
+  }
+  .app-header .app-title i {
+    font-size: 0.7rem; /* Ajuste en móvil */
+  }
+  .app-header button {
+    font-size: 0.7rem; /* Ajuste en móvil */
+    padding: 0.3rem;
+  }
+  .app-header .header-left,
+  .app-header .header-right {
+    gap: 0.4rem;
+  }
+
+  .top-panel-wrapper {
+    /* REMOVED: grid-template-columns: 1fr; (No se apila en móvil, se mantiene 2fr 3fr) */
+    height: 200px; /* Se mantiene la altura fija de desktop */
+    padding: 0 0.5rem; /* Padding horizontal consistente */
+    gap: 0.8rem; /* Espacio entre tarjetas, se mantiene */
+  }
+
+  .credit-info-card, .faq-card {
+    /* REMOVED: max-height: 180px; (Altura controlada por top-panel-wrapper) */
+    padding: 0.8rem; /* Reducir padding en móvil */
+  }
+
+  .card h3 {
+    font-size: 0.7rem; /* Ajuste en móvil */
+    margin-bottom: 0.4rem;
+  }
+
+  .credit-info-card .input-group label,
+  .credit-info-card .input-group select,
+  .faq-card .faq-item {
+    font-size: 0.6rem; /* Ajuste en móvil */
+  }
+
+  .chat-window {
+    padding: 0.6rem; /* Reducir padding del chat en móvil */
+    gap: 0.6rem;
+  }
+
+  .message-bubble .message-content,
+  .message-bubble.assistant .key-objective,
+  .message-bubble.assistant .strategy-title,
+  .message-bubble.assistant .strategy-body p,
+  .message-bubble.assistant .fallback-payload p,
+  .message-bubble.assistant .interactive-survey-payload p {
+    font-size: 0.6rem; /* Ajuste en móvil */
+  }
+
+  .message-bubble-footer {
+    font-size: 0.5rem; /* Ajuste en móvil */
+  }
+
+  .chat-input-form input[type="text"] {
+    font-size: 0.65rem; /* Ajuste en móvil */
+  }
+  .chat-input-form button {
+    font-size: 0.7rem; /* Ajuste en móvil */
+    width: 36px;
+    height: 36px;
+  }
+
+  .modal-content {
+    width: 95%;
+    max-width: unset; /* Quitar max-width en móvil */
+  }
+
+  .modal-header h2 {
+    font-size: 0.8rem; /* Ajuste en móvil */
+  }
+
+  .modal-body p,
+  .modal-body ul,
+  .modal-body li {
+    font-size: 0.6rem; /* Ajuste en móvil */
+  }
+
+  .modal-close-btn, #generate-plan-btn-modal {
+    font-size: 0.65rem; /* Ajuste en móvil */
+    padding: 0.5rem 0.8rem;
+  }
+
+  .login-card {
+    padding: 1.5rem;
+  }
+  .login-card .login-title {
+    font-size: 1.1rem; /* Ajuste en móvil */
+  }
+  .login-card .login-description {
+    font-size: 0.65rem; /* Ajuste en móvil */
+  }
+  .login-form .form-group label {
+    font-size: 0.65rem; /* Ajuste en móvil */
+  }
+  .login-form .form-group input {
+    font-size: 0.7rem; /* Ajuste en móvil */
+  }
+  .login-card .login-button {
+    font-size: 0.75rem; /* Ajuste en móvil */
+    padding: 0.7rem 1rem;
+  }
+}
